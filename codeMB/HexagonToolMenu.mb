@@ -1,0 +1,295 @@
+﻿'*******************************************************************************
+'**   Created by Peter Horsbøll Møller, Pitney Bowes
+'** 	Program:
+'** 	Modul:
+'**
+'*******************************************************************************
+
+'-------------------------------------
+Include "Enums.def"
+Include "Icons.def"
+Include "MapBasic.def"
+Include "Menu.def"
+'**default constants...
+Include "Library\Defaults.def"
+Include "Library\RibbonElements.def"
+
+Define xProgram 		"HexagonTool"
+Define xProgramMenu		"HexagonTool"
+Define xVersion 		"1.0"
+Define xYear			"2019"
+Define xAddToMenuBar	FALSE
+
+Define FILE_INI			GetFolderPath$(FOLDER_MI_PREFERENCE) & xProgram & ".ini"
+Define FILE_DBG			ApplicationDirectory$() & xProgram & ".dbg"
+'Define FILE_DLL			ApplicationDirectory$() & xProgram & ".dll"
+Define FILE_PAD			GetFolderPath$(FOLDER_MI_PREFERENCE) & xProgram & ".btp"
+
+'-------------------------------------
+Include "Library\DEBUGLib.def"
+Include "Library\ERRORLib.def"
+Include "Library\HEXAGONLib.def"
+Include "Library\ProgramInfo.def"
+Include "Library\RIBBONLib.def"
+Include "Library\TABLELib.def"
+
+Include "DLGHexagonSettings.def"
+
+'-----------------------------------------------------------------------------------------
+Declare Sub Main
+Declare Sub EndProgram
+Declare Sub EndHandler
+
+Declare Sub MENUHexagonPointyForMapExtent
+Declare Sub MENUHexagonFlatForMapExtent
+Declare Sub MENUHexagonsForMapExtent(ByVal nHexagonType As Integer)
+Declare Sub MENUHexagons
+Dim	msPath As String
+
+'**********************************************************************************************''
+'**   Created by Peter Horsbøll Møller, Pitney Bowes
+'
+'**********************************************************************************************''
+Sub Main
+
+Dim	nCtrlIdx As Integer,
+	sTabName, sGroupName, sSplitButtonName, sSplitButtonGroupName As String
+
+OnError GoTo ErrorOccured
+
+	'***Initializing ApplicationInfo
+	Call PRGISetApplicationName(xProgram)
+	Call PRGISetApplicationVersion(xVersion)
+	Call PRGISetApplicationCopyrightYear(xYear)
+	Call PRGISetApplicationDevelopedBy("Peter Horsbøll Møller")
+
+	'***Enabling Debug if file exists
+	Call DEBUGEnableByFile(FILE_DBG)
+
+	Alter Menu ID 4 Add
+		"Create Pointy Hexagons for Map Extent"
+			HelpMsg ""
+				Calling MENUHexagonPointyForMapExtent,
+		"Create Flat Hexagons for Map Extent"
+			HelpMsg ""
+				Calling MENUHexagonFlatForMapExtent
+
+	sTabName				= TAB_SPATIAL
+	sGroupName			= TAB_GROUP_SPATIAL_CREATE
+	sSplitButtonName		= "SpatialCreateRegionsSplitButton"
+	sSplitButtonGroupName	= "SpatialCreateRegionsMenuGroup"
+
+'	nCtrlIdx = RBNSplitButtonGroupAddControl("sepTransformSplitButton", "", ""
+'		, ControlType_ContextMenuSeparator, sTabName, sGroupName
+'		, sSplitButtonName, sSplitButtonGroupName)
+
+	nCtrlIdx = RBNSplitButtonGroupAddControl("cmdHexagons", "Hexagons", "", ControlType_Button, sTabName, sGroupName, sSplitButtonName, sSplitButtonGroupName)
+	If nCtrlIdx > 0 Then
+		'Create & Set the button tooltip
+		Call RBNControlSetToolTipIdx(nCtrlIdx, PRGIGetApplicationName(), "Create hexagons.", "")
+		'Set the button icon
+		Call RBNControlSetIconsIdx(nCtrlIdx, CONTROL_SIZE_LARGE, "", ApplicationDirectory$() & "Images\Hexagons_32a.png")
+		'Set Custom MapBasic Handle to the button
+		Call RBNControlSetCustomMBXHandlerIdx(nCtrlIdx, "MENUHexagons")
+	End If
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "Main")
+	Call ERRShow()
+
+End Sub
+
+'****************************************
+'**   Created by Peter Horsbøll Møller, Pitney Bowes
+'**   Ending MapBasic application
+'****************************************
+Sub EndProgram
+
+OnError GoTo ErrorOccured
+
+	End Program
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "EndProgram")
+	Call ERRShow()
+
+End Sub
+
+'****************************************
+'**   Created by Peter Horsbøll Møller, Pitney Bowes
+'**   Ending MapBasic application
+'****************************************
+Sub EndHandler
+
+OnError GoTo ErrorOccured
+
+	Call RBNEndHandler
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "EndProgram")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub MENUHexagonPointyForMapExtent
+
+	OnError GoTo ErrorOccured
+
+	Call MENUHexagonsForMapExtent(HEX_TYPE_POINTY)
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "MENUHexagonPointyForMapExtent")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub MENUHexagonFlatForMapExtent
+
+	OnError GoTo ErrorOccured
+
+	Call MENUHexagonsForMapExtent(HEX_TYPE_FLAT)
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "MENUHexagonFlatForMapExtent")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub MENUHexagonsForMapExtent(ByVal nHexagonType As Integer)
+
+Dim	sTab, sTabFile As String,
+	nMID, nNumHex As Integer
+
+OnError GoTo ErrorOccured
+
+	Call HEXSetUseBaseForHexagon(TRUE)
+
+	sTabFile = FileSaveAsDlg(msPath, "Hexagons", "TAB", "Specify name and location of hexagons grid file...")
+	If sTabFile = "" Then
+		Exit Sub
+	End If
+
+	nMID = FrontWindow()
+	If nMID = 0 Then
+		Exit Sub
+	ElseIf NOT WindowInfo(nMID, WIN_INFO_TYPE) = WIN_MAPPER Then
+		Exit Sub
+	End If
+
+	sTab	= PathToTableName$(sTabFile)
+	If TABIsOpen(sTab) Then
+		If Ask("Close currently open table named '" & sTab & "'?", "Yes", "Abort") Then
+			Exit Sub
+		End If
+	End If
+
+	Create Table sTab
+		( HEXNO Char(20)
+		, SPATIALCASE Char(50)
+		)
+		Type NATIVEX
+		File sTabFile
+
+	Create Map
+		For sTab
+		CoordSys Window nMID
+
+	Set Table sTab Redraw Off
+	Set Table sTab FastEdit On
+	Set Coordsys Table sTab
+	nNumHex = HEXCreateForMap(sTab, "HEXNO", 10000, "m", nMID, HEX_CALC_TYPE_CARTESIAN, nHexagonType)
+	Commit Table sTab
+	Set Table sTab Redraw On
+
+	Add Map
+		Window nMID
+		Layer sTab
+
+	Call RBNNotificationShow("Creating Hexagons", FormatNumber$(HEXNumCreated()) & " hexagons created in " & FormatNumber$(HEXTimeSpent()) & " secs", Notify_Info, 5000)
+
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "MENUHexagonsForMapExtent")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub MENUHexagons
+
+Dim	nMID, nNumHex As Integer
+
+OnError GoTo ErrorOccured
+
+	nMID = FrontWindow()
+	If nMID = 0 Then
+		Exit Sub
+	ElseIf NOT WindowInfo(nMID, WIN_INFO_TYPE) = WIN_MAPPER Then
+		Exit Sub
+	End If
+	Set Coordsys Window nMID
+
+	If NOT DLGHexagonSettings() Then
+		Exit Sub
+	End If
+
+	If TABIsOpen(DLGHSHexagonTable()) Then
+		Close Table DLGHSHexagonTable()
+	End If
+
+	Create Table DLGHSHexagonTable()
+		( HEXNO Char(20)
+		, SPATIALCASE Char(50)
+		)
+		Type NATIVEX
+		File DLGHSHexagonTabFile()
+
+	Create Map
+		For DLGHSHexagonTable()
+		CoordSys Window nMID
+
+	Set Table DLGHSHexagonTable() Redraw Off
+	Set Table DLGHSHexagonTable() FastEdit On
+	Set Coordsys Table DLGHSHexagonTable()
+	nNumHex = HEXCreateForMap(DLGHSHexagonTable(), "HEXNO", DLGHSHexagonSize(), DLGHSHexagonUnit(), nMID, DLGHSCalculationType(), DLGHSHexagonType())
+	Commit Table DLGHSHexagonTable()
+	Set Table DLGHSHexagonTable() Redraw On
+
+	Add Map
+		Window nMID
+		Layer DLGHSHexagonTable()
+
+	Call RBNNotificationShow("Creating Hexagons", FormatNumber$(HEXNumCreated()) & " hexagons created in " & FormatNumber$(HEXTimeSpent()) & " secs", Notify_Info, 5000)
+
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "MENUHexagons")
+	Call ERRShow()
+
+End Sub

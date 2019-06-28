@@ -1,0 +1,15 @@
+14:45:41 14:45:40 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 2.000 m Height: 1.732,050808 m
+14:45:41 14:45:41 Creating Hexagons, Offset X: 1.500 m: Offset Y: 1.732,050808 m
+14:45:41 14:45:41 Estimated number of Column: 259
+14:45:41 14:45:41 Estimated number of Rows: 366
+14:45:41 14:45:41 Estimated number of Hexagons: 94.794
+14:45:54 14:45:54:    100. Column: Created 225 hexagons. Totally hexagons created: 22.500
+14:46:07 14:46:07:    200. Column: Created 225 hexagons. Totally hexagons created: 45.000
+14:46:20 14:46:20:    300. Column: Created 225 hexagons. Totally hexagons created: 67.500
+14:46:32 14:46:32:    400. Column: Created 225 hexagons. Totally hexagons created: 90.000
+14:46:35 14:46:35: Total Number of Hexagons: 95.400 in 55 secs
+14:48:15 14:48:15 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 2.000 m Height: 1.732,050808 m
+14:48:15 14:48:15 Estimated number of Column: 11
+14:48:15 14:48:15 Estimated number of Rows: 16
+14:48:15 14:48:15 Estimated number of Hexagons: 176
+09:41:49 1 Removing control cmdHexagons of type 1

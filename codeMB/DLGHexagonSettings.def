@@ -1,0 +1,13 @@
+﻿Declare Function DLGHexagonSettings() As Logical
+
+Declare Function DLGHSHexagonType() As Integer
+Declare Sub DLGHSSetHexagonType(ByVal nType As Integer)
+Declare Function DLGHSCalculationType() As Integer
+Declare Sub DLGHSSetCalculationType(ByVal nType As Integer)
+Declare Function DLGHSHexagonSize() As Float
+Declare Sub DLGHSSetHexagonSize(ByVal fSize As Float)
+Declare Function DLGHSHexagonUnit() As String
+Declare Sub DLGHSSetHexagonUnit(ByVal sUnit As String)
+Declare Function DLGHSHexagonTabFile() As String
+Declare Function DLGHSHexagonTable() As String
+Declare Sub DLGHSSetHexagonTabFile(ByVal sFile As String)
