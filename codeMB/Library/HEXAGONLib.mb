@@ -1427,8 +1427,8 @@ OnError GoTo ErrorOccured
 		fDistance	= CartesianDistance(fMinX, fMinY, fMaxX, fMinY, sUnit)
 	End If
 
-	Call DEBUGPrint("HEXEstimateColumns: Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fWidth) & " * " & FormatNumber$(fMultiply) & "), 1) = Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fWidth * fMultiply) & "), 1)  = Round(" & (fDistance / (fWidth * fMultiply)) & ", 1)")
-	Call DEBUGPrint("HEXEstimateColumns: " & Round(fDistance / (fWidth * fMultiply), 1))
+'	Call DEBUGPrint("HEXEstimateColumns: Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fWidth) & " * " & FormatNumber$(fMultiply) & "), 1) = Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fWidth * fMultiply) & "), 1)  = Round(" & (fDistance / (fWidth * fMultiply)) & ", 1)")
+'	Call DEBUGPrint("HEXEstimateColumns: " & Round(fDistance / (fWidth * fMultiply), 1))
 	HEXEstimateColumns	= Round(fDistance / (fWidth * fMultiply), 1)
 
 	Exit Function
@@ -1469,8 +1469,8 @@ OnError GoTo ErrorOccured
 		fDistance	= CartesianDistance(fMinX, fMinY, fMinX, fMaxY, sUnit)
 	End If
 
-	Call DEBUGPrint("HEXEstimateRows: Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fHeight) & " * " & FormatNumber$(fMultiply) & "), 1) = 2 * Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fHeight * fMultiply) & "), 1)  = 2 * Round(" & (fDistance / (fHeight * fMultiply)) & ", 1)")
-	Call DEBUGPrint("HEXEstimateRows: " & Round(fDistance / (fHeight * fMultiply), 1))
+'	Call DEBUGPrint("HEXEstimateRows: Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fHeight) & " * " & FormatNumber$(fMultiply) & "), 1) = 2 * Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fHeight * fMultiply) & "), 1)  = 2 * Round(" & (fDistance / (fHeight * fMultiply)) & ", 1)")
+'	Call DEBUGPrint("HEXEstimateRows: " & Round(fDistance / (fHeight * fMultiply), 1))
 	HEXEstimateRows	= Round(fDistance / (fHeight * fMultiply), 1)
 
 	Exit Function
