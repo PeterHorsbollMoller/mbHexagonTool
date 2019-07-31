@@ -24,7 +24,7 @@ Define	HEX_POINTY_OFFSET_Y_MULTIPLIER	1.5
 Define	HEX_FLAT_OFFSET_Y_MULTIPLIER		1.0
 
 Dim	mbUseBaseForHexagon As Logical,
-	mnNumHexagonsCreated, mnTimeSpent As Integer,
+	mnNumHexagonsCreated, nNumHexagonRows, nNumHexagonColumns, mnTimeSpent As Integer,
 	mnNumHexagonsEstimated, mnNumHexagonColumnsEstimated, mnNumHexagonRowsEstimated As Integer
 
 '**********************************************************************************************''
@@ -94,6 +94,45 @@ ErrorOccured:
 
 End Function
 
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'	:
+'Return value:
+'
+'**********************************************************************************************''
+Function HEXNumHexagonColumns() As Integer
+
+OnError GoTo ErrorOccured
+
+	HEXNumHexagonColumns = mnNumHexagonColumns
+	Exit Function
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "HEXNumHexagonColumns")
+	Call ERRShow()
+
+End Function
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'	:
+'Return value:
+'
+'**********************************************************************************************''
+Function HEXNumHexagonRows() As Integer
+
+OnError GoTo ErrorOccured
+
+	HEXNumHexagonRows = mnNumHexagonRows
+	Exit Function
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "HEXNumHexagonRows")
+	Call ERRShow()
+
+End Function
 
 '**********************************************************************************************''
 'Created by Peter Horsbøll Møller, Pitney Bowes
@@ -704,9 +743,13 @@ End Function
 ''		End If
 '	Loop		'Column wise
 '
-'	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum))
 '	mnNumHexagonsCreated	= nCountSum
+'	nNumHexagonRows		= nCount
+'	nNumHexagonColumns		= nColNo
 '	mnTimeSpent		= Timer() - nTime
+
+'	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(mnTimeSpent) & " secs")
+'	Call DEBUGPrint(Time(24) & ": Number of Rows: " & FormatNumber$(nNumHexagonRows) & " Number of Columns: " & FormatNumber$(nNumHexagonColumns))
 
 '	HEXCreatePointyForExtent = nCountSum
 '
@@ -820,7 +863,7 @@ HEXCreateForExtent = 0
 
 		nCountSum = nCountSum + nCount
 		If nColNo Mod 100 = 0 Then
-			Call DEBUGPrint(Time(24) & ":    " & FormatNumber$(nColNo) & ". Column: Created " & FormatNumber$(nCount) & " hexagons. Totally hexagons created: " & FormatNumber$(nCountSum))
+			Call DEBUGPrint(Time(24) & ":    " & FormatNumber$(nColNo) & ". Column: Created " & FormatNumber$(nCount) & " hexagons per column. Totally hexagons created: " & FormatNumber$(nCountSum))
 
 			If nColNo Mod 1000 = 0 Then
 				If Ask(FormatNumber$(nColNo) & " hexagon columns created. Continue?", "No", "Yes") Then
@@ -830,9 +873,13 @@ HEXCreateForExtent = 0
 		End If
 	Loop		'Column wise
 
-	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(Timer() - nTime) & " secs")
 	mnNumHexagonsCreated	= nCountSum
+	nNumHexagonRows		= nRowNo
+	nNumHexagonColumns		= nColNo
 	mnTimeSpent			= Timer() - nTime
+
+	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(mnTimeSpent) & " secs")
+	Call DEBUGPrint(Time(24) & ": Number of Rows: " & FormatNumber$(nNumHexagonRows) & " Number of Columns: " & FormatNumber$(nNumHexagonColumns))
 
 	HEXCreateForExtent = nCountSum
 
@@ -950,9 +997,13 @@ HEXCreatePointyForExtent =  HEXCreateForExtent(sTab, sCol, fSize, sUnit, fMinX, 
 ''		End If
 '	Loop		'Column wise
 '
-'	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(Timer() - nTime) & " secs")
 '	mnNumHexagonsCreated	= nCountSum
+'	nNumHexagonRows		= nCount
+'	nNumHexagonColumns		= nColNo
 '	mnTimeSpent			= Timer() - nTime
+
+'	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(mnTimeSpent) & " secs")
+'	Call DEBUGPrint(Time(24) & ": Number of Rows: " & FormatNumber$(nNumHexagonRows) & " Number of Columns: " & FormatNumber$(nNumHexagonColumns))
 
 '	HEXCreatePointyForExtent = nCountSum
 
@@ -1064,9 +1115,13 @@ HEXCreateFlatForExtent =  HEXCreateForExtent(sTab, sCol, fSize, sUnit, fMinX, fM
 ''		End If
 '	Loop		'Column wise
 '
-'	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(Timer() - nTime) & " secs")
 '	mnNumHexagonsCreated	= nCountSum
+'	nNumHexagonRows		= nCount
+'	nNumHexagonColumns		= nColNo
 '	mnTimeSpent			= Timer() - nTime
+
+'	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(mnTimeSpent) & " secs")
+'	Call DEBUGPrint(Time(24) & ": Number of Rows: " & FormatNumber$(nNumHexagonRows) & " Number of Columns: " & FormatNumber$(nNumHexagonColumns))
 
 '	HEXCreateFlatForExtent = nCountSum
 
@@ -1233,9 +1288,13 @@ HEXCreateForObject = 0
 		End If
 	Loop		'Column wise
 
-	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(Timer() - nTime) & " secs")
 	mnNumHexagonsCreated	= nCountSum
+	nNumHexagonRows		= nRowNo
+	nNumHexagonColumns		= nColNo
 	mnTimeSpent			= Timer() - nTime
+
+	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(mnTimeSpent) & " secs")
+	Call DEBUGPrint(Time(24) & ": Number of Rows: " & FormatNumber$(nNumHexagonRows) & " Number of Columns: " & FormatNumber$(nNumHexagonColumns))
 
 	HEXCreateForObject = nCountSum
 
@@ -1355,13 +1414,22 @@ Function HEXEstimateColumns(	  ByVal fSize As Float
 						, ByVal nHexagonType As Integer
 						) As Integer				'Returns the number of columns estiamted
 
+Dim	fDistance, fWidth, fMultiply As Float
+
 OnError GoTo ErrorOccured
 
+	fWidth		= HEXGetWidth(fSize, nHexagonType)
+	fMultiply		= HEXGetOffsetXMultiplier(nHexagonType)
+
 	If nCalculationType = HEX_CALC_TYPE_SPHERICAL Then
-		HEXEstimateColumns	= Round(Distance(fMinX, fMinY, fMinX, fMaxY, sUnit) / (HEXGetWidth(fSize, nHexagonType) * HEXGetOffsetXMultiplier(nHexagonType)), 1)
+		fDistance	= Distance(fMinX, fMinY, fMaxX, fMinY, sUnit)
 	Else
-		HEXEstimateColumns	= Round(CartesianDistance(fMinX, fMinY, fMinX, fMaxY, sUnit) / (HEXGetWidth(fSize, nHexagonType) * HEXGetOffsetXMultiplier(nHexagonType)), 1)
+		fDistance	= CartesianDistance(fMinX, fMinY, fMaxX, fMinY, sUnit)
 	End If
+
+	Call DEBUGPrint("HEXEstimateColumns: Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fWidth) & " * " & FormatNumber$(fMultiply) & "), 1) = Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fWidth * fMultiply) & "), 1)  = Round(" & (fDistance / (fWidth * fMultiply)) & ", 1)")
+	Call DEBUGPrint("HEXEstimateColumns: " & Round(fDistance / (fWidth * fMultiply), 1))
+	HEXEstimateColumns	= Round(fDistance / (fWidth * fMultiply), 1)
 
 	Exit Function
 '-------------------------
@@ -1388,13 +1456,22 @@ Function HEXEstimateRows(	  ByVal fSize As Float
 						, ByVal nHexagonType As Integer
 						) As Integer				'Returns the number of rows estiamted
 
+Dim	fDistance, fHeight, fMultiply As Float
+
 OnError GoTo ErrorOccured
 
+	fHeight		= HEXGetHeight(fSize, nHexagonType)
+	fMultiply		= HEXGetOffsetYMultiplier(nHexagonType)
+
 	If nCalculationType = HEX_CALC_TYPE_SPHERICAL Then
-		HEXEstimateRows	= Round((Distance(fMinX, fMinY, fMaxX, fMinY, sUnit) / (HEXGetHeight(fSize, nHexagonType) * HEXGetOffsetYMultiplier(nHexagonType))), 1)
+		fDistance	= Distance(fMinX, fMinY, fMinX, fMaxY, sUnit)
 	Else
-		HEXEstimateRows	= Round((CartesianDistance(fMinX, fMinY, fMaxX, fMinY, sUnit) / (HEXGetHeight(fSize, nHexagonType) * HEXGetOffsetYMultiplier(nHexagonType))), 1)
+		fDistance	= CartesianDistance(fMinX, fMinY, fMinX, fMaxY, sUnit)
 	End If
+
+	Call DEBUGPrint("HEXEstimateRows: Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fHeight) & " * " & FormatNumber$(fMultiply) & "), 1) = 2 * Round(" & FormatNumber$(fDistance) & " / (" & FormatNumber$(fHeight * fMultiply) & "), 1)  = 2 * Round(" & (fDistance / (fHeight * fMultiply)) & ", 1)")
+	Call DEBUGPrint("HEXEstimateRows: " & Round(fDistance / (fHeight * fMultiply), 1))
+	HEXEstimateRows	= Round(fDistance / (fHeight * fMultiply), 1)
 
 	Exit Function
 '-------------------------
@@ -1631,9 +1708,13 @@ HEXPCreateForExtent = 0
 		nCountSum = nCountSum + nCount
 	Loop		'Column wise
 
-	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(Timer() - nTime) & " secs")
+	nNumHexagonRows		= nCount
+	nNumHexagonColumns		= nColNo
 	mnNumHexagonsCreated	= nCountSum
 	mnTimeSpent			= Timer() - nTime
+
+	Call DEBUGPrint(Time(24) & ": Total Number of Hexagons: " & FormatNumber$(nCountSum) & " in " & FormatNumber$(mnTimeSpent) & " secs")
+	Call DEBUGPrint(Time(24) & ": Number of Rows: " & FormatNumber$(nNumHexagonRows) & " Number of Columns: " & FormatNumber$(nNumHexagonColumns))
 
 	HEXPCreateForExtent = nCountSum
 

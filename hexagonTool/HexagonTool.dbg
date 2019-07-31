@@ -13,3 +13,669 @@
 14:48:15 14:48:15 Estimated number of Rows: 16
 14:48:15 14:48:15 Estimated number of Hexagons: 176
 09:41:49 1 Removing control cmdHexagons of type 1
+09:28:03 Tab 0 is named TabHome but shown as 
+09:28:03 Tab 1 is named TabTable but shown as 
+09:28:03 Tab 2 is named TabMap but shown as 
+09:28:03 Tab 3 is named TabSpatial but shown as 
+09:28:14 09:28:14 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+09:28:14 09:28:14 Estimated number of Column: 2
+09:28:14 09:28:14 Estimated number of Rows: 1
+09:28:14 09:28:14 Estimated number of Hexagons: 2
+09:28:42 09:28:42 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+09:28:42 09:28:42 Estimated number of Column: 171
+09:28:42 09:28:42 Estimated number of Rows: 76
+09:28:42 09:28:42 Estimated number of Hexagons: 12.996
+09:28:42 09:28:42 HEXCreateForObject: Creating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+09:28:42 09:28:42 Creating Hexagons, Offset X: 43,30127 m: Offset Y: 150 m
+09:28:42 09:28:42 Estimated number of Column: 171
+09:28:42 09:28:42 Estimated number of Rows: 76
+09:28:42 09:28:42 Estimated number of Hexagons: 12.996
+09:28:44 09:28:44:    100. Column: Created 50 hexagons. Totally hexagons created: 5.000
+09:28:47 09:28:47:    200. Column: Created 50 hexagons. Totally hexagons created: 10.000
+09:28:49 09:28:49: Total Number of Hexagons: 13.200 in 7 secs
+11:05:19 11:05:19 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:05:19 11:05:19 Estimated number of Column: 171
+11:05:19 11:05:19 Estimated number of Rows: 76
+11:05:19 11:05:19 Estimated number of Hexagons: 12.996
+11:30:57 1 Removing control cmdHexagons of type 1
+11:31:19 Tab 0 is named TabHome but shown as 
+11:31:19 Tab 1 is named TabTable but shown as 
+11:31:19 Tab 2 is named TabMap but shown as 
+11:31:19 Tab 3 is named TabSpatial but shown as 
+11:31:22 11:31:22 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+11:31:22 11:31:22 Estimated number of Column: 2
+11:31:22 11:31:22 Estimated number of Rows: 1
+11:31:22 11:31:22 Estimated number of Hexagons: 2
+11:31:48 11:31:48 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+11:31:48 11:31:48 Estimated number of Column: 0
+11:31:48 11:31:48 Estimated number of Rows: 0
+11:31:48 11:31:48 Estimated number of Hexagons: 0
+11:31:50 11:31:50 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+11:31:50 11:31:50 Estimated number of Column: 2
+11:31:50 11:31:50 Estimated number of Rows: 1
+11:31:50 11:31:50 Estimated number of Hexagons: 2
+11:39:44 1 Removing control cmdHexagons of type 1
+11:39:55 Tab 0 is named TabHome but shown as 
+11:39:55 Tab 1 is named TabTable but shown as 
+11:39:55 Tab 2 is named TabMap but shown as 
+11:39:55 Tab 3 is named TabSpatial but shown as 
+11:40:00 11:40:00 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+11:40:00 11:40:00 Estimated number of Column: 2
+11:40:00 11:40:00 Estimated number of Rows: 1
+11:40:00 11:40:00 Estimated number of Hexagons: 2
+11:40:18 11:40:18 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+11:40:18 11:40:18 Estimated number of Column: 2
+11:40:18 11:40:18 Estimated number of Rows: 1
+11:40:18 11:40:18 Estimated number of Hexagons: 2
+11:42:20 1 Removing control cmdHexagons of type 1
+11:45:23 Tab 0 is named TabHome but shown as 
+11:45:23 Tab 1 is named TabTable but shown as 
+11:45:23 Tab 2 is named TabMap but shown as 
+11:45:23 Tab 3 is named TabSpatial but shown as 
+11:45:27 11:45:27 HEXEstimateForObject: Estimating Hexagons, size: 5 m: Width: 8,660254 m Height: 10 m
+11:45:27 11:45:27 Estimated number of Column: 237
+11:45:27 11:45:27 Estimated number of Rows: 128
+11:45:27 11:45:27 Estimated number of Hexagons: 30.336
+11:45:40 11:45:40 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:45:40 11:45:40 Estimated number of Column: 24
+11:45:40 11:45:40 Estimated number of Rows: 13
+11:45:40 11:45:40 Estimated number of Hexagons: 312
+11:45:54 11:45:54 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:45:54 11:45:54 Estimated number of Column: 24
+11:45:54 11:45:54 Estimated number of Rows: 13
+11:45:54 11:45:54 Estimated number of Hexagons: 312
+11:46:02 11:46:02 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:46:02 11:46:02 Estimated number of Column: 24
+11:46:02 11:46:02 Estimated number of Rows: 13
+11:46:02 11:46:02 Estimated number of Hexagons: 312
+11:46:27 11:46:27 HEXEstimateForObject: Estimating Hexagons, size: 500 m: Width: 866,025404 m Height: 1.000 m
+11:46:27 11:46:27 Estimated number of Column: 2
+11:46:27 11:46:27 Estimated number of Rows: 1
+11:46:27 11:46:27 Estimated number of Hexagons: 2
+11:46:30 11:46:30 HEXEstimateForObject: Estimating Hexagons, size: 500 m: Width: 866,025404 m Height: 1.000 m
+11:46:30 11:46:30 Estimated number of Column: 2
+11:46:30 11:46:30 Estimated number of Rows: 1
+11:46:30 11:46:30 Estimated number of Hexagons: 2
+11:46:37 11:46:37 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:46:37 11:46:37 Estimated number of Column: 24
+11:46:37 11:46:37 Estimated number of Rows: 13
+11:46:37 11:46:37 Estimated number of Hexagons: 312
+11:46:41 11:46:41 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:46:41 11:46:41 Estimated number of Column: 24
+11:46:41 11:46:41 Estimated number of Rows: 13
+11:46:41 11:46:41 Estimated number of Hexagons: 312
+11:49:47 1 Removing control cmdHexagons of type 1
+11:50:04 Tab 0 is named TabHome but shown as 
+11:50:04 Tab 1 is named TabTable but shown as 
+11:50:04 Tab 2 is named TabMap but shown as 
+11:50:04 Tab 3 is named TabSpatial but shown as 
+11:50:11 11:50:11 HEXEstimateForObject: Estimating Hexagons, size: 5 m: Width: 8,660254 m Height: 10 m
+11:50:11 11:50:11 Estimated number of Column: 1.714
+11:50:11 11:50:11 Estimated number of Rows: 762
+11:50:11 11:50:11 Estimated number of Hexagons: 1.306.068
+11:50:20 11:50:20 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:50:20 11:50:20 Estimated number of Column: 171
+11:50:20 11:50:20 Estimated number of Rows: 76
+11:50:20 11:50:20 Estimated number of Hexagons: 12.996
+11:50:25 11:50:25 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:50:25 11:50:25 Estimated number of Column: 24
+11:50:25 11:50:25 Estimated number of Rows: 13
+11:50:25 11:50:25 Estimated number of Hexagons: 312
+11:50:27 11:50:27 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:50:27 11:50:27 Estimated number of Column: 171
+11:50:27 11:50:27 Estimated number of Rows: 76
+11:50:27 11:50:27 Estimated number of Hexagons: 12.996
+11:50:36 11:50:36 HEXEstimateForObject: Estimating Hexagons, size: 50 m: Width: 86,60254 m Height: 100 m
+11:50:36 11:50:36 Estimated number of Column: 24
+11:50:36 11:50:36 Estimated number of Rows: 13
+11:50:36 11:50:36 Estimated number of Hexagons: 312
+11:50:55 1 Removing control cmdHexagons of type 1
+13:46:24 Tab 0 is named TabHome but shown as 
+13:46:24 Tab 1 is named TabTable but shown as 
+13:46:24 Tab 2 is named TabMap but shown as 
+13:46:24 Tab 3 is named TabSpatial but shown as 
+13:46:24 _RegisterPublicMBXFunction(HEXCreatePointy, HEXCreatePointy, Creates a pointy Hexagon of a given size around an input point)
+13:46:24 _RegisterPublicMBXFunction(HEXCreateFlat, HEXCreateFlat, Creates a flat Hexagon of a given size around an input point)
+13:46:24 _RegisterPublicMBXFunction(HEXCreatePointyForExtent, HEXCreatePointyForExtent, Creates pointy Hexagons for a given extent)
+13:46:24 _RegisterPublicMBXFunction(HEXCreatePointyForMap, HEXCreatePointyForMap, Creates pointy Hexagons for a given extent)
+13:46:24 _RegisterPublicMBXFunction(HEXCreateFlatForMap, HEXCreateFlatForMap, Creates flat Hexagons for a given extent)
+13:46:24 _RegisterPublicMBXFunction(HEXCreateForMap, HEXCreateForMap, Creates flat Hexagons for a given map)
+13:46:24 _RegisterPublicMBXFunction(HEXCreateForObject, HEXCreateForObject, Creates Hexagons for a given feature/object)
+13:46:24 _RegisterPublicMBXFunction(HEXCreateForExtent, HEXCreateForExtent, Creates Hexagons for a given extent)
+13:46:24 _RegisterPublicMBXFunction(HEXPCreateForExtent, HEXPCreateForExtent, Creates Hexagons for a given extent)
+13:46:24 _RegisterPublicMBXFunction(HEXPCreateForMap, HEXPCreateForMap, Creates Hexagons for a given map)
+13:46:48 13:46:48 HEXEstimateForObject: Estimating Hexagons, size: 5 m: Width: 8,660254 m Height: 10 m
+13:48:20 13:48:20 HEXEstimateForObject: Estimating Hexagons, size: 5 m: Width: 8,660254 m Height: 10 m
+13:48:20 13:48:20 Estimated number of Column: 9.713
+13:48:20 13:48:20 Estimated number of Rows: 2.714
+13:48:20 13:48:20 Estimated number of Hexagons: 26.361.082
+13:48:34 13:48:34 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+13:48:34 13:48:34 Estimated number of Column: 80
+13:48:34 13:48:34 Estimated number of Rows: 50
+13:48:34 13:48:34 Estimated number of Hexagons: 4.000
+13:48:40 13:48:40 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+13:48:40 13:48:40 Estimated number of Column: 10
+13:48:40 13:48:40 Estimated number of Rows: 3
+13:48:40 13:48:40 Estimated number of Hexagons: 30
+13:51:04 13:51:04 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+13:51:04 13:51:04 Estimated number of Column: 80
+13:51:04 13:51:04 Estimated number of Rows: 50
+13:51:04 13:51:04 Estimated number of Hexagons: 4.000
+13:51:06 13:51:06 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+13:51:06 13:51:06 Estimated number of Column: 7
+13:51:06 13:51:06 Estimated number of Rows: 3
+13:51:06 13:51:06 Estimated number of Hexagons: 21
+13:51:18 13:51:18 HEXEstimateForObject: Estimating Hexagons, size: 500 m: Width: 866,025404 m Height: 1.000 m
+13:51:18 13:51:18 Estimated number of Column: 97
+13:51:18 13:51:18 Estimated number of Rows: 27
+13:51:18 13:51:18 Estimated number of Hexagons: 2.619
+13:51:19 13:51:19 HEXEstimateForObject: Estimating Hexagons, size: 500 m: Width: 866,025404 m Height: 1.000 m
+13:51:19 13:51:19 Estimated number of Column: 66
+13:51:19 13:51:19 Estimated number of Rows: 31
+13:51:19 13:51:19 Estimated number of Hexagons: 2.046
+13:57:22 13:57:22 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+13:57:22 13:57:22 Estimated number of Column: 49
+13:57:22 13:57:22 Estimated number of Rows: 14
+13:57:22 13:57:22 Estimated number of Hexagons: 686
+13:57:23 13:57:23 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+13:57:23 13:57:23 Estimated number of Column: 33
+13:57:23 13:57:23 Estimated number of Rows: 16
+13:57:23 13:57:23 Estimated number of Hexagons: 528
+13:57:28 13:57:28 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+13:57:28 13:57:28 Estimated number of Column: 33
+13:57:28 13:57:28 Estimated number of Rows: 16
+13:57:28 13:57:28 Estimated number of Hexagons: 528
+13:57:29 13:57:29 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+13:57:29 13:57:29 Creating Hexagons, Offset X: 866,025404 m: Offset Y: 3.000 m
+13:57:29 13:57:29 Estimated number of Column: 33
+13:57:29 13:57:29 Estimated number of Rows: 16
+13:57:29 13:57:29 Estimated number of Hexagons: 528
+13:57:29 13:57:29: Total Number of Hexagons: 550 in 0 secs
+13:57:55 13:57:55 HEXEstimateForObject: Estimating Hexagons, size: 1 m: Width: 1,732051 m Height: 2 m
+13:58:05 13:58:05 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+13:58:05 13:58:05 Estimated number of Column: 49
+13:58:05 13:58:05 Estimated number of Rows: 14
+13:58:05 13:58:05 Estimated number of Hexagons: 686
+13:58:12 13:58:12 HEXEstimateForObject: Estimating Hexagons, size: 100 m: Width: 173,205081 m Height: 200 m
+13:58:12 13:58:12 Estimated number of Column: 5.309
+13:58:12 13:58:12 Estimated number of Rows: 2.502
+13:58:12 13:58:12 Estimated number of Hexagons: 13.283.118
+13:58:13 13:58:13 HEXEstimateForObject: Estimating Hexagons, size: 100 m: Width: 173,205081 m Height: 200 m
+13:58:13 13:58:13 Estimated number of Column: 486
+13:58:13 13:58:13 Estimated number of Rows: 136
+13:58:13 13:58:13 Estimated number of Hexagons: 66.096
+13:58:23 13:58:23 HEXEstimateForObject: Estimating Hexagons, size: 250 m: Width: 433,012702 m Height: 500 m
+13:58:23 13:58:23 Estimated number of Column: 2.123
+13:58:23 13:58:23 Estimated number of Rows: 1.001
+13:58:23 13:58:23 Estimated number of Hexagons: 2.125.123
+13:58:24 13:58:24 HEXEstimateForObject: Estimating Hexagons, size: 250 m: Width: 433,012702 m Height: 500 m
+13:58:24 13:58:24 Estimated number of Column: 194
+13:58:24 13:58:24 Estimated number of Rows: 54
+13:58:24 13:58:24 Estimated number of Hexagons: 10.476
+13:58:32 13:58:32 HEXEstimateForObject: Estimating Hexagons, size: 250 m: Width: 433,012702 m Height: 500 m
+13:58:32 13:58:32 Estimated number of Column: 2.123
+13:58:32 13:58:32 Estimated number of Rows: 1.001
+13:58:32 13:58:32 Estimated number of Hexagons: 2.125.123
+14:24:58 1 Removing control cmdHexagons of type 1
+14:31:42 Tab 0 is named TabHome but shown as 
+14:31:42 Tab 1 is named TabTable but shown as 
+14:31:42 Tab 2 is named TabMap but shown as 
+14:31:42 Tab 3 is named TabSpatial but shown as 
+14:31:43 _RegisterPublicMBXFunction(HEXCreatePointy, HEXCreatePointy, Creates a pointy Hexagon of a given size around an input point)
+14:31:43 _RegisterPublicMBXFunction(HEXCreateFlat, HEXCreateFlat, Creates a flat Hexagon of a given size around an input point)
+14:31:43 _RegisterPublicMBXFunction(HEXCreatePointyForExtent, HEXCreatePointyForExtent, Creates pointy Hexagons for a given extent)
+14:31:43 _RegisterPublicMBXFunction(HEXCreatePointyForMap, HEXCreatePointyForMap, Creates pointy Hexagons for a given extent)
+14:31:43 _RegisterPublicMBXFunction(HEXCreateFlatForMap, HEXCreateFlatForMap, Creates flat Hexagons for a given extent)
+14:31:43 _RegisterPublicMBXFunction(HEXCreateForMap, HEXCreateForMap, Creates flat Hexagons for a given map)
+14:31:43 _RegisterPublicMBXFunction(HEXCreateForObject, HEXCreateForObject, Creates Hexagons for a given feature/object)
+14:31:43 _RegisterPublicMBXFunction(HEXCreateForExtent, HEXCreateForExtent, Creates Hexagons for a given extent)
+14:31:43 _RegisterPublicMBXFunction(HEXPCreateForExtent, HEXPCreateForExtent, Creates Hexagons for a given extent)
+14:31:43 _RegisterPublicMBXFunction(HEXPCreateForMap, HEXPCreateForMap, Creates Hexagons for a given map)
+14:31:56 14:31:56 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+14:31:56 14:31:56 Estimated number of Column: 106
+14:31:56 14:31:56 Estimated number of Rows: 50
+14:31:56 14:31:56 Estimated number of Hexagons: 5.300
+14:32:08 14:32:08 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+14:32:08 14:32:08 Estimated number of Column: 10
+14:32:08 14:32:08 Estimated number of Rows: 3
+14:32:08 14:32:08 Estimated number of Hexagons: 30
+14:32:12 14:32:12 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+14:32:12 14:32:12 Estimated number of Column: 106
+14:32:12 14:32:12 Estimated number of Rows: 50
+14:32:12 14:32:12 Estimated number of Hexagons: 5.300
+14:32:14 14:32:14 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+14:32:14 14:32:14 Estimated number of Column: 7
+14:32:14 14:32:14 Estimated number of Rows: 3
+14:32:14 14:32:14 Estimated number of Hexagons: 21
+14:32:29 14:32:29 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+14:32:29 14:32:29 Estimated number of Column: 33
+14:32:29 14:32:29 Estimated number of Rows: 16
+14:32:29 14:32:29 Estimated number of Hexagons: 528
+14:32:34 14:32:34 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+14:32:34 14:32:34 Estimated number of Column: 531
+14:32:34 14:32:34 Estimated number of Rows: 250
+14:32:34 14:32:34 Estimated number of Hexagons: 132.750
+14:32:58 14:32:58 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+14:32:58 14:32:58 Estimated number of Column: 531
+14:32:58 14:32:58 Estimated number of Rows: 250
+14:32:58 14:32:58 Estimated number of Hexagons: 132.750
+14:33:06 14:33:06 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+14:33:06 14:33:06 Creating Hexagons, Offset X: 866,025404 m: Offset Y: 3.000 m
+14:33:06 14:33:06 Estimated number of Column: 531
+14:33:06 14:33:06 Estimated number of Rows: 250
+14:33:06 14:33:06 Estimated number of Hexagons: 132.750
+14:33:20 14:33:20:    100. Column: Created 154 hexagons. Totally hexagons created: 15.400
+14:33:40 14:33:40:    200. Column: Created 154 hexagons. Totally hexagons created: 30.800
+14:33:57 14:33:57:    300. Column: Created 154 hexagons. Totally hexagons created: 46.200
+14:34:12 14:34:12:    400. Column: Created 154 hexagons. Totally hexagons created: 61.600
+14:36:15 14:36:15:    500. Column: Created 154 hexagons. Totally hexagons created: 77.000
+14:36:29 14:36:29:    600. Column: Created 154 hexagons. Totally hexagons created: 92.400
+14:36:46 14:36:46:    700. Column: Created 154 hexagons. Totally hexagons created: 107.800
+14:37:03 14:37:03:    800. Column: Created 154 hexagons. Totally hexagons created: 123.200
+14:37:13 14:37:13: Total Number of Hexagons: 133.518 in 247 secs
+15:00:09 1 Removing control cmdHexagons of type 1
+15:22:21 Tab 0 is named TabHome but shown as 
+15:22:21 Tab 1 is named TabTable but shown as 
+15:22:21 Tab 2 is named TabMap but shown as 
+15:22:21 Tab 3 is named TabSpatial but shown as 
+15:22:21 _RegisterPublicMBXFunction(HEXCreatePointy, HEXCreatePointy, Creates a pointy Hexagon of a given size around an input point)
+15:22:21 _RegisterPublicMBXFunction(HEXCreateFlat, HEXCreateFlat, Creates a flat Hexagon of a given size around an input point)
+15:22:21 _RegisterPublicMBXFunction(HEXCreatePointyForExtent, HEXCreatePointyForExtent, Creates pointy Hexagons for a given extent)
+15:22:21 _RegisterPublicMBXFunction(HEXCreatePointyForMap, HEXCreatePointyForMap, Creates pointy Hexagons for a given extent)
+15:22:21 _RegisterPublicMBXFunction(HEXCreateFlatForMap, HEXCreateFlatForMap, Creates flat Hexagons for a given extent)
+15:22:21 _RegisterPublicMBXFunction(HEXCreateForMap, HEXCreateForMap, Creates flat Hexagons for a given map)
+15:22:21 _RegisterPublicMBXFunction(HEXCreateForObject, HEXCreateForObject, Creates Hexagons for a given feature/object)
+15:22:21 _RegisterPublicMBXFunction(HEXCreateForExtent, HEXCreateForExtent, Creates Hexagons for a given extent)
+15:22:21 _RegisterPublicMBXFunction(HEXPCreateForExtent, HEXPCreateForExtent, Creates Hexagons for a given extent)
+15:22:21 _RegisterPublicMBXFunction(HEXPCreateForMap, HEXPCreateForMap, Creates Hexagons for a given map)
+15:23:05 15:23:05 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+15:23:05 HEXEstimateColumns: Round(28.733,111458 / (8.660,254038 / 0,5, 1)
+15:23:05 HEXEstimateColumns: Round(46.903,582741 / (10.000 / 1,5, 1)
+15:23:05 15:23:05 Estimated number of Column: 2
+15:23:05 15:23:05 Estimated number of Rows: 3
+15:23:05 15:23:05 Estimated number of Hexagons: 6
+15:23:10 15:23:10 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+15:23:10 HEXEstimateColumns: Round(345.833,286635 / (8.660,254038 / 0,5, 1)
+15:23:10 HEXEstimateColumns: Round(564.534,141343 / (10.000 / 1,5, 1)
+15:23:10 15:23:10 Estimated number of Column: 20
+15:23:10 15:23:10 Estimated number of Rows: 38
+15:23:10 15:23:10 Estimated number of Hexagons: 760
+15:23:13 15:23:13 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+15:23:13 HEXEstimateColumns: Round(42.058,189177 / (8.660,254038 / 0,5, 1)
+15:23:13 HEXEstimateColumns: Round(40.709,337489 / (10.000 / 1,5, 1)
+15:23:13 15:23:13 Estimated number of Column: 2
+15:23:13 15:23:13 Estimated number of Rows: 3
+15:23:13 15:23:13 Estimated number of Hexagons: 6
+15:23:21 15:23:21 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+15:23:21 HEXEstimateColumns: Round(42.058,189177 / (1.732,050808 / 0,5, 1)
+15:23:21 HEXEstimateColumns: Round(40.709,337489 / (2.000 / 1,5, 1)
+15:23:21 15:23:21 Estimated number of Column: 12
+15:23:21 15:23:21 Estimated number of Rows: 14
+15:23:21 15:23:21 Estimated number of Hexagons: 168
+15:23:37 15:23:37 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+15:23:37 HEXEstimateColumns: Round(42.058,189177 / (1.732,050808 / 0,5, 1)
+15:23:37 HEXEstimateColumns: Round(40.709,337489 / (2.000 / 1,5, 1)
+15:23:37 15:23:37 Estimated number of Column: 12
+15:23:37 15:23:37 Estimated number of Rows: 14
+15:23:37 15:23:37 Estimated number of Hexagons: 168
+15:23:37 15:23:37 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+15:23:37 15:23:37 Creating Hexagons, Offset X: 866,025404 m: Offset Y: 3.000 m
+15:23:37 HEXEstimateColumns: Round(345.833,286635 / (1.732,050808 / 0,5, 1)
+15:23:37 HEXEstimateColumns: Round(564.534,141343 / (2.000 / 1,5, 1)
+15:23:37 15:23:37 Estimated number of Column: 100
+15:23:37 15:23:37 Estimated number of Rows: 188
+15:23:37 15:23:37 Estimated number of Hexagons: 18.800
+15:23:48 15:23:48:    100. Column: Created 116 hexagons. Totally hexagons created: 11.600
+15:23:59 15:23:59:    200. Column: Created 116 hexagons. Totally hexagons created: 23.200
+15:24:10 15:24:10:    300. Column: Created 116 hexagons. Totally hexagons created: 34.800
+15:24:20 15:24:20:    400. Column: Created 116 hexagons. Totally hexagons created: 46.400
+15:24:30 15:24:30:    500. Column: Created 116 hexagons. Totally hexagons created: 58.000
+15:24:42 15:24:42:    600. Column: Created 116 hexagons. Totally hexagons created: 69.600
+15:24:49 15:24:49: Total Number of Hexagons: 75.632 in 72 secs
+15:24:49 15:24:49: Number of Rows: 116 Number of Columns: 653
+15:45:07 1 Removing control cmdHexagons of type 1
+15:51:34 Tab 0 is named TabHome but shown as 
+15:51:34 Tab 1 is named TabTable but shown as 
+15:51:34 Tab 2 is named TabMap but shown as 
+15:51:34 Tab 3 is named TabSpatial but shown as 
+15:51:34 _RegisterPublicMBXFunction(HEXCreatePointy, HEXCreatePointy, Creates a pointy Hexagon of a given size around an input point)
+15:51:34 _RegisterPublicMBXFunction(HEXCreateFlat, HEXCreateFlat, Creates a flat Hexagon of a given size around an input point)
+15:51:34 _RegisterPublicMBXFunction(HEXCreatePointyForExtent, HEXCreatePointyForExtent, Creates pointy Hexagons for a given extent)
+15:51:34 _RegisterPublicMBXFunction(HEXCreatePointyForMap, HEXCreatePointyForMap, Creates pointy Hexagons for a given extent)
+15:51:34 _RegisterPublicMBXFunction(HEXCreateFlatForMap, HEXCreateFlatForMap, Creates flat Hexagons for a given extent)
+15:51:34 _RegisterPublicMBXFunction(HEXCreateForMap, HEXCreateForMap, Creates flat Hexagons for a given map)
+15:51:34 _RegisterPublicMBXFunction(HEXCreateForObject, HEXCreateForObject, Creates Hexagons for a given feature/object)
+15:51:34 _RegisterPublicMBXFunction(HEXCreateForExtent, HEXCreateForExtent, Creates Hexagons for a given extent)
+15:51:34 _RegisterPublicMBXFunction(HEXPCreateForExtent, HEXPCreateForExtent, Creates Hexagons for a given extent)
+15:51:34 _RegisterPublicMBXFunction(HEXPCreateForMap, HEXPCreateForMap, Creates Hexagons for a given map)
+15:51:42 15:51:42 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+15:51:42 HEXEstimateColumns: Round(335.613,626817 / (8.660,254038 / 0,5), 1) = Round(335.613,626817 / (17.320,508076), 1) = Round(77,506647), 1)
+15:51:42 HEXEstimateRows: Round(564.534,141343 / (10.000 / 1,5), 1)
+15:51:42 15:51:42 Estimated number of Column: 19
+15:51:42 15:51:42 Estimated number of Rows: 38
+15:51:42 15:51:42 Estimated number of Hexagons: 722
+15:51:48 15:51:48 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+15:51:48 HEXEstimateColumns: Round(42.058,189177 / (8.660,254038 / 0,5), 1) = Round(42.058,189177 / (17.320,508076), 1) = Round(9,712923), 1)
+15:51:48 HEXEstimateRows: Round(40.709,337489 / (10.000 / 1,5), 1)
+15:51:48 15:51:48 Estimated number of Column: 2
+15:51:48 15:51:48 Estimated number of Rows: 3
+15:51:48 15:51:48 Estimated number of Hexagons: 6
+15:52:01 15:52:01 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+15:52:01 HEXEstimateColumns: Round(42.058,189177 / (1.732,050808 / 0,5), 1) = Round(42.058,189177 / (3.464,101615), 1) = Round(48,564614), 1)
+15:52:01 HEXEstimateRows: Round(40.709,337489 / (2.000 / 1,5), 1)
+15:52:01 15:52:01 Estimated number of Column: 12
+15:52:01 15:52:01 Estimated number of Rows: 14
+15:52:01 15:52:01 Estimated number of Hexagons: 168
+15:52:45 15:52:45 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+15:52:45 HEXEstimateColumns: Round(42.058,189177 / (1.732,050808 / 0,5), 1) = Round(42.058,189177 / (3.464,101615), 1) = Round(48,564614), 1)
+15:52:45 HEXEstimateRows: Round(40.709,337489 / (2.000 / 1,5), 1)
+15:52:45 15:52:45 Estimated number of Column: 12
+15:52:45 15:52:45 Estimated number of Rows: 14
+15:52:45 15:52:45 Estimated number of Hexagons: 168
+15:52:45 15:52:45 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+15:52:45 15:52:45 Creating Hexagons, Offset X: 866,025404 m: Offset Y: 3.000 m
+15:52:45 HEXEstimateColumns: Round(42.058,19 / (1.732,050808 / 0,5), 1) = Round(42.058,19 / (3.464,101615), 1) = Round(48,564615), 1)
+15:52:45 HEXEstimateRows: Round(40.709,34 / (2.000 / 1,5), 1)
+15:52:45 15:52:45 Estimated number of Column: 12
+15:52:45 15:52:45 Estimated number of Rows: 14
+15:52:45 15:52:45 Estimated number of Hexagons: 168
+15:52:46 15:52:46: Total Number of Hexagons: 362 in 1 secs
+15:52:46 15:52:46: Number of Rows: 1 Number of Columns: 49
+16:07:00 16:07:00 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:07:00 HEXEstimateColumns: Round(42.058,189177 / (1.732,050808 / 0,5), 1) = Round(42.058,189177 / (3.464,101615), 1) = Round(48,564614), 1)
+16:07:00 HEXEstimateRows: Round(40.709,337489 / (2.000 / 1,5), 1)
+16:07:00 16:07:00 Estimated number of Column: 12
+16:07:00 16:07:00 Estimated number of Rows: 14
+16:07:00 16:07:00 Estimated number of Hexagons: 168
+16:07:02 16:07:02 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:07:02 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 / 0,5), 1) = Round(27.884,024288 / (3.464,101615), 1) = Round(32,197698), 1)
+16:07:02 HEXEstimateRows: Round(46.903,582741 / (2.000 / 1,5), 1)
+16:07:02 16:07:02 Estimated number of Column: 8
+16:07:02 16:07:02 Estimated number of Rows: 16
+16:07:02 16:07:02 Estimated number of Hexagons: 128
+16:07:11 16:07:11 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:07:11 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 / 0,5), 1) = Round(27.884,024288 / (3.464,101615), 1) = Round(32,197698), 1)
+16:07:11 HEXEstimateRows: Round(46.903,582741 / (2.000 / 1,5), 1)
+16:07:11 16:07:11 Estimated number of Column: 8
+16:07:11 16:07:11 Estimated number of Rows: 16
+16:07:11 16:07:11 Estimated number of Hexagons: 128
+16:07:11 16:07:11 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:07:11 16:07:11 Creating Hexagons, Offset X: 866,025404 m: Offset Y: 3.000 m
+16:07:11 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 / 0,5), 1) = Round(27.884,024288 / (3.464,101615), 1) = Round(32,197698), 1)
+16:07:11 HEXEstimateRows: Round(46.903,582741 / (2.000 / 1,5), 1)
+16:07:11 16:07:11 Estimated number of Column: 8
+16:07:11 16:07:11 Estimated number of Rows: 16
+16:07:11 16:07:11 Estimated number of Hexagons: 128
+16:07:12 16:07:12: Total Number of Hexagons: 550 in 1 secs
+16:07:12 16:07:12: Number of Rows: 9 Number of Columns: 56
+16:25:57 1 Removing control cmdHexagons of type 1
+16:26:44 Tab 0 is named TabHome but shown as 
+16:26:44 Tab 1 is named TabTable but shown as 
+16:26:44 Tab 2 is named TabMap but shown as 
+16:26:44 Tab 3 is named TabSpatial but shown as 
+16:26:45 _RegisterPublicMBXFunction(HEXCreatePointy, HEXCreatePointy, Creates a pointy Hexagon of a given size around an input point)
+16:26:45 _RegisterPublicMBXFunction(HEXCreateFlat, HEXCreateFlat, Creates a flat Hexagon of a given size around an input point)
+16:26:45 _RegisterPublicMBXFunction(HEXCreatePointyForExtent, HEXCreatePointyForExtent, Creates pointy Hexagons for a given extent)
+16:26:45 _RegisterPublicMBXFunction(HEXCreatePointyForMap, HEXCreatePointyForMap, Creates pointy Hexagons for a given extent)
+16:26:45 _RegisterPublicMBXFunction(HEXCreateFlatForMap, HEXCreateFlatForMap, Creates flat Hexagons for a given extent)
+16:26:45 _RegisterPublicMBXFunction(HEXCreateForMap, HEXCreateForMap, Creates flat Hexagons for a given map)
+16:26:45 _RegisterPublicMBXFunction(HEXCreateForObject, HEXCreateForObject, Creates Hexagons for a given feature/object)
+16:26:45 _RegisterPublicMBXFunction(HEXCreateForExtent, HEXCreateForExtent, Creates Hexagons for a given extent)
+16:26:45 _RegisterPublicMBXFunction(HEXPCreateForExtent, HEXPCreateForExtent, Creates Hexagons for a given extent)
+16:26:45 _RegisterPublicMBXFunction(HEXPCreateForMap, HEXPCreateForMap, Creates Hexagons for a given map)
+16:26:51 16:26:51 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+16:26:51 HEXEstimateColumns: Round(27.884,024288 / (8.660,254038 / 0,5), 1) = Round(27.884,024288 / (17.320,508076), 1)  = Round(1.60988, 1)
+16:26:51 HEXEstimateRows: Round(46.903,582741 / (10.000 / 1,5), 1) = Round(46.903,582741 / (6.666,666667), 1)  = Round(7.03554, 1)
+16:26:51 16:26:51 Estimated number of Column: 6
+16:26:51 16:26:51 Estimated number of Rows: 3
+16:26:51 16:26:51 Estimated number of Hexagons: 18
+16:27:04 16:27:04 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:27:04 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 / 0,5), 1) = Round(27.884,024288 / (3.464,101615), 1)  = Round(8.04942, 1)
+16:27:04 HEXEstimateRows: Round(46.903,582741 / (2.000 / 1,5), 1) = Round(46.903,582741 / (1.333,333333), 1)  = Round(35.1777, 1)
+16:27:04 16:27:04 Estimated number of Column: 32
+16:27:04 16:27:04 Estimated number of Rows: 16
+16:27:04 16:27:04 Estimated number of Hexagons: 512
+16:28:13 1 Removing control cmdHexagons of type 1
+16:30:05 Tab 0 is named TabHome but shown as 
+16:30:05 Tab 1 is named TabTable but shown as 
+16:30:05 Tab 2 is named TabMap but shown as 
+16:30:05 Tab 3 is named TabSpatial but shown as 
+16:30:05 _RegisterPublicMBXFunction(HEXCreatePointy, HEXCreatePointy, Creates a pointy Hexagon of a given size around an input point)
+16:30:05 _RegisterPublicMBXFunction(HEXCreateFlat, HEXCreateFlat, Creates a flat Hexagon of a given size around an input point)
+16:30:05 _RegisterPublicMBXFunction(HEXCreatePointyForExtent, HEXCreatePointyForExtent, Creates pointy Hexagons for a given extent)
+16:30:05 _RegisterPublicMBXFunction(HEXCreatePointyForMap, HEXCreatePointyForMap, Creates pointy Hexagons for a given extent)
+16:30:05 _RegisterPublicMBXFunction(HEXCreateFlatForMap, HEXCreateFlatForMap, Creates flat Hexagons for a given extent)
+16:30:05 _RegisterPublicMBXFunction(HEXCreateForMap, HEXCreateForMap, Creates flat Hexagons for a given map)
+16:30:05 _RegisterPublicMBXFunction(HEXCreateForObject, HEXCreateForObject, Creates Hexagons for a given feature/object)
+16:30:05 _RegisterPublicMBXFunction(HEXCreateForExtent, HEXCreateForExtent, Creates Hexagons for a given extent)
+16:30:05 _RegisterPublicMBXFunction(HEXPCreateForExtent, HEXPCreateForExtent, Creates Hexagons for a given extent)
+16:30:05 _RegisterPublicMBXFunction(HEXPCreateForMap, HEXPCreateForMap, Creates Hexagons for a given map)
+16:30:13 16:30:13 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+16:30:13 HEXEstimateColumns: Round(27.884,024288 / (8.660,254038 / 0,5), 1) = Round(27.884,024288 / (17.320,508076), 1)  = Round(1.60988, 1)
+16:30:13 HEXEstimateColumns: 2
+16:30:13 HEXEstimateRows: Round(46.903,582741 / (10.000 / 1,5), 1) = Round(46.903,582741 / (6.666,666667), 1)  = Round(7.03554, 1)
+16:30:13 HEXEstimateRows: 7
+16:30:13 16:30:13 Estimated number of Column: 2
+16:30:13 16:30:13 Estimated number of Rows: 7
+16:30:13 16:30:13 Estimated number of Hexagons: 14
+16:30:16 16:30:16 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+16:30:16 HEXEstimateColumns: Round(27.884,024288 / (8.660,254038 / 0,5), 1) = Round(27.884,024288 / (17.320,508076), 1)  = Round(1.60988, 1)
+16:30:16 HEXEstimateColumns: 2
+16:30:16 HEXEstimateRows: Round(46.903,582741 / (10.000 / 1,5), 1) = Round(46.903,582741 / (6.666,666667), 1)  = Round(7.03554, 1)
+16:30:16 HEXEstimateRows: 7
+16:30:16 16:30:16 Estimated number of Column: 2
+16:30:16 16:30:16 Estimated number of Rows: 7
+16:30:16 16:30:16 Estimated number of Hexagons: 14
+16:30:20 16:30:20 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:30:20 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 / 0,5), 1) = Round(27.884,024288 / (3.464,101615), 1)  = Round(8.04942, 1)
+16:30:20 HEXEstimateColumns: 8
+16:30:20 HEXEstimateRows: Round(46.903,582741 / (2.000 / 1,5), 1) = Round(46.903,582741 / (1.333,333333), 1)  = Round(35.1777, 1)
+16:30:20 HEXEstimateRows: 35
+16:30:20 16:30:20 Estimated number of Column: 8
+16:30:20 16:30:20 Estimated number of Rows: 35
+16:30:20 16:30:20 Estimated number of Hexagons: 280
+16:30:43 16:30:43 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:30:43 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 / 0,5), 1) = Round(27.884,024288 / (3.464,101615), 1)  = Round(8.04942, 1)
+16:30:43 HEXEstimateColumns: 8
+16:30:43 HEXEstimateRows: Round(46.903,582741 / (2.000 / 1,5), 1) = Round(46.903,582741 / (1.333,333333), 1)  = Round(35.1777, 1)
+16:30:43 HEXEstimateRows: 35
+16:30:43 16:30:43 Estimated number of Column: 8
+16:30:43 16:30:43 Estimated number of Rows: 35
+16:30:43 16:30:43 Estimated number of Hexagons: 280
+16:30:44 16:30:44 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:30:44 16:30:44 Creating Hexagons, Offset X: 866,025404 m: Offset Y: 3.000 m
+16:30:44 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 / 0,5), 1) = Round(27.884,024288 / (3.464,101615), 1)  = Round(8.04942, 1)
+16:30:44 HEXEstimateColumns: 8
+16:30:44 HEXEstimateRows: Round(46.903,582741 / (2.000 / 1,5), 1) = Round(46.903,582741 / (1.333,333333), 1)  = Round(35.1777, 1)
+16:30:44 HEXEstimateRows: 35
+16:30:44 16:30:44 Estimated number of Column: 8
+16:30:44 16:30:44 Estimated number of Rows: 35
+16:30:44 16:30:44 Estimated number of Hexagons: 280
+16:30:44 16:30:44: Total Number of Hexagons: 550 in 0 secs
+16:30:44 16:30:44: Number of Rows: 10 Number of Columns: 56
+16:36:00 1 Removing control cmdHexagons of type 1
+16:39:52 Tab 0 is named TabHome but shown as 
+16:39:52 Tab 1 is named TabTable but shown as 
+16:39:52 Tab 2 is named TabMap but shown as 
+16:39:52 Tab 3 is named TabSpatial but shown as 
+16:39:52 _RegisterPublicMBXFunction(HEXCreatePointy, HEXCreatePointy, Creates a pointy Hexagon of a given size around an input point)
+16:39:52 _RegisterPublicMBXFunction(HEXCreateFlat, HEXCreateFlat, Creates a flat Hexagon of a given size around an input point)
+16:39:52 _RegisterPublicMBXFunction(HEXCreatePointyForExtent, HEXCreatePointyForExtent, Creates pointy Hexagons for a given extent)
+16:39:52 _RegisterPublicMBXFunction(HEXCreatePointyForMap, HEXCreatePointyForMap, Creates pointy Hexagons for a given extent)
+16:39:52 _RegisterPublicMBXFunction(HEXCreateFlatForMap, HEXCreateFlatForMap, Creates flat Hexagons for a given extent)
+16:39:52 _RegisterPublicMBXFunction(HEXCreateForMap, HEXCreateForMap, Creates flat Hexagons for a given map)
+16:39:52 _RegisterPublicMBXFunction(HEXCreateForObject, HEXCreateForObject, Creates Hexagons for a given feature/object)
+16:39:52 _RegisterPublicMBXFunction(HEXCreateForExtent, HEXCreateForExtent, Creates Hexagons for a given extent)
+16:39:52 _RegisterPublicMBXFunction(HEXPCreateForExtent, HEXPCreateForExtent, Creates Hexagons for a given extent)
+16:39:52 _RegisterPublicMBXFunction(HEXPCreateForMap, HEXPCreateForMap, Creates Hexagons for a given map)
+16:39:56 16:39:55 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+16:39:56 HEXEstimateColumns: Round(27.884,024288 / (8.660,254038 * 0,5), 1) = Round(27.884,024288 / (4.330,127019), 1)  = Round(6.43954, 1)
+16:39:56 HEXEstimateColumns: 6
+16:39:56 HEXEstimateRows: 2 * Round(46.903,582741 / (10.000 * 1,5), 1) = 2 * Round(46.903,582741 / (15.000), 1)  = 2 * Round(3.12691, 1)
+16:39:56 HEXEstimateRows: 6
+16:39:56 16:39:56 Estimated number of Column: 6
+16:39:56 16:39:56 Estimated number of Rows: 6
+16:39:56 16:39:56 Estimated number of Hexagons: 36
+16:40:01 16:40:01 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:40:01 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 * 0,5), 1) = Round(27.884,024288 / (866,025404), 1)  = Round(32.1977, 1)
+16:40:01 HEXEstimateColumns: 32
+16:40:01 HEXEstimateRows: 2 * Round(46.903,582741 / (2.000 * 1,5), 1) = 2 * Round(46.903,582741 / (3.000), 1)  = 2 * Round(15.6345, 1)
+16:40:01 HEXEstimateRows: 32
+16:40:01 16:40:01 Estimated number of Column: 32
+16:40:01 16:40:01 Estimated number of Rows: 32
+16:40:01 16:40:01 Estimated number of Hexagons: 1.024
+16:40:16 16:40:16 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:40:16 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 * 0,5), 1) = Round(27.884,024288 / (866,025404), 1)  = Round(32.1977, 1)
+16:40:16 HEXEstimateColumns: 32
+16:40:16 HEXEstimateRows: 2 * Round(46.903,582741 / (2.000 * 1,5), 1) = 2 * Round(46.903,582741 / (3.000), 1)  = 2 * Round(15.6345, 1)
+16:40:16 HEXEstimateRows: 32
+16:40:16 16:40:16 Estimated number of Column: 32
+16:40:16 16:40:16 Estimated number of Rows: 32
+16:40:16 16:40:16 Estimated number of Hexagons: 1.024
+16:40:16 16:40:16 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:40:16 16:40:16 Creating Hexagons, Offset X: 866,025404 m: Offset Y: 3.000 m
+16:40:16 HEXEstimateColumns: Round(27.884,024288 / (1.732,050808 * 0,5), 1) = Round(27.884,024288 / (866,025404), 1)  = Round(32.1977, 1)
+16:40:16 HEXEstimateColumns: 32
+16:40:16 HEXEstimateRows: 2 * Round(46.903,582741 / (2.000 * 1,5), 1) = 2 * Round(46.903,582741 / (3.000), 1)  = 2 * Round(15.6345, 1)
+16:40:16 HEXEstimateRows: 32
+16:40:16 16:40:16 Estimated number of Column: 32
+16:40:16 16:40:16 Estimated number of Rows: 32
+16:40:17 16:40:16 Estimated number of Hexagons: 1.024
+16:40:18 16:40:18: Total Number of Hexagons: 550 in 2 secs
+16:40:18 16:40:18: Number of Rows: 10 Number of Columns: 56
+16:54:31 1 Removing control cmdHexagons of type 1
+16:54:44 Tab 0 is named TabHome but shown as 
+16:54:44 Tab 1 is named TabTable but shown as 
+16:54:44 Tab 2 is named TabMap but shown as 
+16:54:44 Tab 3 is named TabSpatial but shown as 
+16:54:44 _RegisterPublicMBXFunction(HEXCreatePointy, HEXCreatePointy, Creates a pointy Hexagon of a given size around an input point)
+16:54:45 _RegisterPublicMBXFunction(HEXCreateFlat, HEXCreateFlat, Creates a flat Hexagon of a given size around an input point)
+16:54:45 _RegisterPublicMBXFunction(HEXCreatePointyForExtent, HEXCreatePointyForExtent, Creates pointy Hexagons for a given extent)
+16:54:45 _RegisterPublicMBXFunction(HEXCreatePointyForMap, HEXCreatePointyForMap, Creates pointy Hexagons for a given extent)
+16:54:45 _RegisterPublicMBXFunction(HEXCreateFlatForMap, HEXCreateFlatForMap, Creates flat Hexagons for a given extent)
+16:54:45 _RegisterPublicMBXFunction(HEXCreateForMap, HEXCreateForMap, Creates flat Hexagons for a given map)
+16:54:45 _RegisterPublicMBXFunction(HEXCreateForObject, HEXCreateForObject, Creates Hexagons for a given feature/object)
+16:54:45 _RegisterPublicMBXFunction(HEXCreateForExtent, HEXCreateForExtent, Creates Hexagons for a given extent)
+16:54:45 _RegisterPublicMBXFunction(HEXPCreateForExtent, HEXPCreateForExtent, Creates Hexagons for a given extent)
+16:54:45 _RegisterPublicMBXFunction(HEXPCreateForMap, HEXPCreateForMap, Creates Hexagons for a given map)
+16:54:50 16:54:50 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+16:54:50 HEXEstimateColumns: Round(46.903,582741 / (8.660,254038 * 0,5), 1) = Round(46.903,582741 / (4.330,127019), 1)  = Round(10.8319, 1)
+16:54:50 HEXEstimateColumns: 11
+16:54:50 HEXEstimateRows: 2 * Round(27.884,024288 / (10.000 * 1,5), 1) = 2 * Round(27.884,024288 / (15.000), 1)  = 2 * Round(1.85893, 1)
+16:54:50 HEXEstimateRows: 4
+16:54:50 16:54:50 Estimated number of Column: 11
+16:54:50 16:54:50 Estimated number of Rows: 4
+16:54:50 16:54:50 Estimated number of Hexagons: 44
+16:54:55 16:54:55 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:54:55 HEXEstimateColumns: Round(46.903,582741 / (1.732,050808 * 0,5), 1) = Round(46.903,582741 / (866,025404), 1)  = Round(54.1596, 1)
+16:54:55 HEXEstimateColumns: 54
+16:54:56 HEXEstimateRows: 2 * Round(27.884,024288 / (2.000 * 1,5), 1) = 2 * Round(27.884,024288 / (3.000), 1)  = 2 * Round(9.29467, 1)
+16:54:56 HEXEstimateRows: 18
+16:54:56 16:54:56 Estimated number of Column: 54
+16:54:56 16:54:56 Estimated number of Rows: 18
+16:54:56 16:54:56 Estimated number of Hexagons: 972
+16:55:06 16:55:06 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:55:06 HEXEstimateColumns: Round(46.903,582741 / (1.732,050808 * 0,5), 1) = Round(46.903,582741 / (866,025404), 1)  = Round(54.1596, 1)
+16:55:06 HEXEstimateColumns: 54
+16:55:06 HEXEstimateRows: 2 * Round(27.884,024288 / (2.000 * 1,5), 1) = 2 * Round(27.884,024288 / (3.000), 1)  = 2 * Round(9.29467, 1)
+16:55:06 HEXEstimateRows: 18
+16:55:06 16:55:06 Estimated number of Column: 54
+16:55:06 16:55:06 Estimated number of Rows: 18
+16:55:06 16:55:06 Estimated number of Hexagons: 972
+16:55:08 16:55:08 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:55:08 16:55:08 Creating Hexagons, Offset X: 866,025404 m: Offset Y: 3.000 m
+16:55:08 HEXEstimateColumns: Round(46.903,582741 / (1.732,050808 * 0,5), 1) = Round(46.903,582741 / (866,025404), 1)  = Round(54.1596, 1)
+16:55:08 HEXEstimateColumns: 54
+16:55:08 HEXEstimateRows: 2 * Round(27.884,024288 / (2.000 * 1,5), 1) = 2 * Round(27.884,024288 / (3.000), 1)  = 2 * Round(9.29467, 1)
+16:55:08 HEXEstimateRows: 18
+16:55:08 16:55:08 Estimated number of Column: 54
+16:55:08 16:55:08 Estimated number of Rows: 18
+16:55:08 16:55:08 Estimated number of Hexagons: 972
+16:55:09 16:55:09: Total Number of Hexagons: 550 in 1 secs
+16:55:09 16:55:09: Number of Rows: 10 Number of Columns: 56
+16:55:56 1 Removing control cmdHexagons of type 1
+16:56:57 Tab 0 is named TabHome but shown as 
+16:56:57 Tab 1 is named TabTable but shown as 
+16:56:57 Tab 2 is named TabMap but shown as 
+16:56:57 Tab 3 is named TabSpatial but shown as 
+16:56:58 _RegisterPublicMBXFunction(HEXCreatePointy, HEXCreatePointy, Creates a pointy Hexagon of a given size around an input point)
+16:56:58 _RegisterPublicMBXFunction(HEXCreateFlat, HEXCreateFlat, Creates a flat Hexagon of a given size around an input point)
+16:56:58 _RegisterPublicMBXFunction(HEXCreatePointyForExtent, HEXCreatePointyForExtent, Creates pointy Hexagons for a given extent)
+16:56:58 _RegisterPublicMBXFunction(HEXCreatePointyForMap, HEXCreatePointyForMap, Creates pointy Hexagons for a given extent)
+16:56:58 _RegisterPublicMBXFunction(HEXCreateFlatForMap, HEXCreateFlatForMap, Creates flat Hexagons for a given extent)
+16:56:58 _RegisterPublicMBXFunction(HEXCreateForMap, HEXCreateForMap, Creates flat Hexagons for a given map)
+16:56:58 _RegisterPublicMBXFunction(HEXCreateForObject, HEXCreateForObject, Creates Hexagons for a given feature/object)
+16:56:58 _RegisterPublicMBXFunction(HEXCreateForExtent, HEXCreateForExtent, Creates Hexagons for a given extent)
+16:56:58 _RegisterPublicMBXFunction(HEXPCreateForExtent, HEXPCreateForExtent, Creates Hexagons for a given extent)
+16:56:58 _RegisterPublicMBXFunction(HEXPCreateForMap, HEXPCreateForMap, Creates Hexagons for a given map)
+16:57:04 16:57:04 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
+16:57:04 HEXEstimateColumns: Round(46.903,582741 / (8.660,254038 * 0,5), 1) = Round(46.903,582741 / (4.330,127019), 1)  = Round(10.8319, 1)
+16:57:04 HEXEstimateColumns: 11
+16:57:04 HEXEstimateRows: Round(27.884,024288 / (10.000 * 1,5), 1) = 2 * Round(27.884,024288 / (15.000), 1)  = 2 * Round(1.85893, 1)
+16:57:04 HEXEstimateRows: 2
+16:57:04 16:57:04 Estimated number of Column: 11
+16:57:04 16:57:04 Estimated number of Rows: 2
+16:57:04 16:57:04 Estimated number of Hexagons: 22
+16:57:09 16:57:09 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:57:09 HEXEstimateColumns: Round(46.903,582741 / (1.732,050808 * 0,5), 1) = Round(46.903,582741 / (866,025404), 1)  = Round(54.1596, 1)
+16:57:09 HEXEstimateColumns: 54
+16:57:09 HEXEstimateRows: Round(27.884,024288 / (2.000 * 1,5), 1) = 2 * Round(27.884,024288 / (3.000), 1)  = 2 * Round(9.29467, 1)
+16:57:09 HEXEstimateRows: 9
+16:57:09 16:57:09 Estimated number of Column: 54
+16:57:09 16:57:09 Estimated number of Rows: 9
+16:57:09 16:57:09 Estimated number of Hexagons: 486
+16:57:20 16:57:20 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:57:20 HEXEstimateColumns: Round(46.903,582741 / (1.732,050808 * 0,5), 1) = Round(46.903,582741 / (866,025404), 1)  = Round(54.1596, 1)
+16:57:20 HEXEstimateColumns: 54
+16:57:20 HEXEstimateRows: Round(27.884,024288 / (2.000 * 1,5), 1) = 2 * Round(27.884,024288 / (3.000), 1)  = 2 * Round(9.29467, 1)
+16:57:20 HEXEstimateRows: 9
+16:57:20 16:57:20 Estimated number of Column: 54
+16:57:20 16:57:20 Estimated number of Rows: 9
+16:57:20 16:57:20 Estimated number of Hexagons: 486
+16:57:22 16:57:22 HEXCreateForObject: Creating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+16:57:22 16:57:22 Creating Hexagons, Offset X: 866,025404 m: Offset Y: 3.000 m
+16:57:22 HEXEstimateColumns: Round(46.903,582741 / (1.732,050808 * 0,5), 1) = Round(46.903,582741 / (866,025404), 1)  = Round(54.1596, 1)
+16:57:22 HEXEstimateColumns: 54
+16:57:22 HEXEstimateRows: Round(27.884,024288 / (2.000 * 1,5), 1) = 2 * Round(27.884,024288 / (3.000), 1)  = 2 * Round(9.29467, 1)
+16:57:22 HEXEstimateRows: 9
+16:57:22 16:57:22 Estimated number of Column: 54
+16:57:22 16:57:22 Estimated number of Rows: 9
+16:57:22 16:57:22 Estimated number of Hexagons: 486
+16:57:23 16:57:23: Total Number of Hexagons: 550 in 1 secs
+16:57:23 16:57:23: Number of Rows: 10 Number of Columns: 56
+17:03:01 17:03:01 HEXEstimateForObject: Estimating Hexagons, size: 1.000 m: Width: 1.732,050808 m Height: 2.000 m
+17:03:01 HEXEstimateColumns: Round(46.903,582741 / (1.732,050808 * 0,5), 1) = Round(46.903,582741 / (866,025404), 1)  = Round(54.1596, 1)
+17:03:01 HEXEstimateColumns: 54
+17:03:01 HEXEstimateRows: Round(27.884,024288 / (2.000 * 1,5), 1) = 2 * Round(27.884,024288 / (3.000), 1)  = 2 * Round(9.29467, 1)
+17:03:01 HEXEstimateRows: 9
+17:03:01 17:03:01 Estimated number of Column: 54
+17:03:01 17:03:01 Estimated number of Rows: 9
+17:03:01 17:03:01 Estimated number of Hexagons: 486
+17:03:10 17:03:10 HEXEstimateForObject: Estimating Hexagons, size: 500 m: Width: 866,025404 m Height: 1.000 m
+17:03:10 HEXEstimateColumns: Round(46.903,582741 / (866,025404 * 0,5), 1) = Round(46.903,582741 / (433,012702), 1)  = Round(108.319, 1)
+17:03:10 HEXEstimateColumns: 108
+17:03:10 HEXEstimateRows: Round(27.884,024288 / (1.000 * 1,5), 1) = 2 * Round(27.884,024288 / (1.500), 1)  = 2 * Round(18.5893, 1)
+17:03:10 HEXEstimateRows: 19
+17:03:10 17:03:10 Estimated number of Column: 108
+17:03:10 17:03:10 Estimated number of Rows: 19
+17:03:10 17:03:10 Estimated number of Hexagons: 2.052
+17:03:16 17:03:16 HEXEstimateForObject: Estimating Hexagons, size: 500 m: Width: 866,025404 m Height: 1.000 m
+17:03:16 HEXEstimateColumns: Round(46.903,582741 / (866,025404 * 0,5), 1) = Round(46.903,582741 / (433,012702), 1)  = Round(108.319, 1)
+17:03:16 HEXEstimateColumns: 108
+17:03:16 HEXEstimateRows: Round(27.884,024288 / (1.000 * 1,5), 1) = 2 * Round(27.884,024288 / (1.500), 1)  = 2 * Round(18.5893, 1)
+17:03:16 HEXEstimateRows: 19
+17:03:16 17:03:16 Estimated number of Column: 108
+17:03:16 17:03:16 Estimated number of Rows: 19
+17:03:16 17:03:16 Estimated number of Hexagons: 2.052
+17:03:16 17:03:16 HEXCreateForObject: Creating Hexagons, size: 500 m: Width: 866,025404 m Height: 1.000 m
+17:03:16 17:03:16 Creating Hexagons, Offset X: 433,012702 m: Offset Y: 1.500 m
+17:03:16 HEXEstimateColumns: Round(46.903,582741 / (866,025404 * 0,5), 1) = Round(46.903,582741 / (433,012702), 1)  = Round(108.319, 1)
+17:03:16 HEXEstimateColumns: 108
+17:03:16 HEXEstimateRows: Round(27.884,024288 / (1.000 * 1,5), 1) = 2 * Round(27.884,024288 / (1.500), 1)  = 2 * Round(18.5893, 1)
+17:03:16 HEXEstimateRows: 19
+17:03:16 17:03:16 Estimated number of Column: 108
+17:03:16 17:03:16 Estimated number of Rows: 19
+17:03:16 17:03:16 Estimated number of Hexagons: 2.052
+17:03:20 17:03:20:    100. Column: Created 19 hexagons. Totally hexagons created: 1.900
+17:03:20 17:03:20: Total Number of Hexagons: 2.071 in 4 secs
+17:03:20 17:03:20: Number of Rows: 19 Number of Columns: 110

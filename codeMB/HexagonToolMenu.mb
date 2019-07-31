@@ -52,7 +52,7 @@ Dim	msPath As String
 '**********************************************************************************************''
 Sub Main
 
-Dim	nCtrlIdx As Integer,
+Dim	nCtrlIdx, nResult As Integer,
 	sTabName, sGroupName, sSplitButtonName, sSplitButtonGroupName As String
 
 OnError GoTo ErrorOccured
@@ -92,6 +92,18 @@ OnError GoTo ErrorOccured
 		'Set Custom MapBasic Handle to the button
 		Call RBNControlSetCustomMBXHandlerIdx(nCtrlIdx, "MENUHexagons")
 	End If
+
+	nResult = RBNRegisterFunctionAsPublic("HEXCreatePointy", "HEXCreatePointy", "Creates a pointy Hexagon of a given size around an input point")
+	nResult = RBNRegisterFunctionAsPublic("HEXCreateFlat", "HEXCreateFlat", "Creates a flat Hexagon of a given size around an input point")
+	nResult = RBNRegisterFunctionAsPublic("HEXCreatePointyForExtent", "HEXCreatePointyForExtent", "Creates pointy Hexagons for a given extent")
+	nResult = RBNRegisterFunctionAsPublic("HEXCreatePointyForMap", "HEXCreatePointyForMap", "Creates pointy Hexagons for a given extent")
+	nResult = RBNRegisterFunctionAsPublic("HEXCreateFlatForMap", "HEXCreateFlatForMap", "Creates flat Hexagons for a given extent")
+	nResult = RBNRegisterFunctionAsPublic("HEXCreateForMap", "HEXCreateForMap", "Creates flat Hexagons for a given map")
+	nResult = RBNRegisterFunctionAsPublic("HEXCreateForObject", "HEXCreateForObject", "Creates Hexagons for a given feature/object")
+	nResult = RBNRegisterFunctionAsPublic("HEXCreateForExtent", "HEXCreateForExtent", "Creates Hexagons for a given extent")
+	nResult = RBNRegisterFunctionAsPublic("HEXPCreateForExtent", "HEXPCreateForExtent", "Creates Hexagons for a given extent")
+	nResult = RBNRegisterFunctionAsPublic("HEXPCreateForMap", "HEXPCreateForMap", "Creates Hexagons for a given map")
+
 	Exit Sub
 '-------------------------
 ErrorOccured:
@@ -248,11 +260,19 @@ OnError GoTo ErrorOccured
 
 	nMID = FrontWindow()
 	If nMID = 0 Then
-		Exit Sub
+		If NOT SelectionInfo(SEL_INFO_NROWS) = 1 Then
+			Exit Sub
+		End If
 	ElseIf NOT WindowInfo(nMID, WIN_INFO_TYPE) = WIN_MAPPER Then
-		Exit Sub
+		If NOT SelectionInfo(SEL_INFO_NROWS) = 1 Then
+			Exit Sub
+		End If
 	End If
-	Set Coordsys Window nMID
+	If NOT nMID = 0 Then
+		Set Coordsys Window nMID
+	Else
+		Set CoordSys Table SelectionInfo(SEL_INFO_TABLENAME)
+	End If
 
 	If NOT DLGHexagonSettings() Then
 		Exit Sub
@@ -269,20 +289,32 @@ OnError GoTo ErrorOccured
 		Type NATIVEX
 		File DLGHSHexagonTabFile()
 
-	Create Map
-		For DLGHSHexagonTable()
-		CoordSys Window nMID
+	If DLGHSInputType() = HEX_INPUT_TYPE_MAP Then
+		Create Map
+			For DLGHSHexagonTable()
+			CoordSys Window nMID
+	Else
+		Create Map
+			For DLGHSHexagonTable()
+			CoordSys Table SelectionInfo(SEL_INFO_TABLENAME)
+	End If
 
 	Set Table DLGHSHexagonTable() Redraw Off
 	Set Table DLGHSHexagonTable() FastEdit On
 	Set Coordsys Table DLGHSHexagonTable()
-	nNumHex = HEXCreateForMap(DLGHSHexagonTable(), "HEXNO", DLGHSHexagonSize(), DLGHSHexagonUnit(), nMID, DLGHSCalculationType(), DLGHSHexagonType())
+	If DLGHSInputType() = HEX_INPUT_TYPE_MAP Then
+		nNumHex = HEXCreateForMap(DLGHSHexagonTable(), "HEXNO", DLGHSHexagonSize(), DLGHSHexagonUnit(), DLGHSHexagonExtentMID(), DLGHSCalculationType(), DLGHSHexagonType())
+	Else
+		nNumHex = HEXCreateForObject(DLGHSHexagonTable(), "HEXNO", DLGHSHexagonSize(), DLGHSHexagonUnit(), DLGHSHexagonExtentOBJ(), DLGHSCalculationType(), DLGHSHexagonType())
+	End If
 	Commit Table DLGHSHexagonTable()
 	Set Table DLGHSHexagonTable() Redraw On
 
-	Add Map
-		Window nMID
-		Layer DLGHSHexagonTable()
+	If not DLGHSHexagonExtentMID() = 0 Then
+		Add Map
+			Window DLGHSHexagonExtentMID()
+			Layer DLGHSHexagonTable()
+	End If
 
 	Call RBNNotificationShow("Creating Hexagons", FormatNumber$(HEXNumCreated()) & " hexagons created in " & FormatNumber$(HEXTimeSpent()) & " secs", Notify_Info, 5000)
 

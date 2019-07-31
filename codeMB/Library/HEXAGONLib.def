@@ -12,6 +12,8 @@ Declare Function HEXUseBaseForHexagon() As Logical
 
 Declare Function HEXTimeSpent() As Integer	'in seconds
 Declare Function HEXNumCreated() As Integer
+Declare Function HEXNumHexagonColumns() As Integer
+Declare Function HEXNumHexagonRows() As Integer
 Declare Function HEXNumHexagonsEstimated() As Integer
 Declare Function HEXNumHexagonColumnsEstimated() As Integer
 Declare Function HEXNumHexagonRowsEstimated() As Integer

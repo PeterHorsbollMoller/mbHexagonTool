@@ -1,5 +1,10 @@
-﻿Declare Function DLGHexagonSettings() As Logical
+﻿Define	HEX_INPUT_TYPE_MAP			1
+Define	HEX_INPUT_TYPE_SELECTION		2
 
+Declare Function DLGHexagonSettings() As Logical
+
+Declare Sub DLGHSSetInputType(ByVal nType As Integer)
+Declare Function DLGHSInputType() As Integer
 Declare Function DLGHSHexagonType() As Integer
 Declare Sub DLGHSSetHexagonType(ByVal nType As Integer)
 Declare Function DLGHSCalculationType() As Integer
@@ -11,3 +16,9 @@ Declare Sub DLGHSSetHexagonUnit(ByVal sUnit As String)
 Declare Function DLGHSHexagonTabFile() As String
 Declare Function DLGHSHexagonTable() As String
 Declare Sub DLGHSSetHexagonTabFile(ByVal sFile As String)
+
+Declare Function DLGHSHexagonExtentMID() As Integer
+Declare Sub DLGHSSetHexagonExtentMID(ByVal nMID As Integer)
+Declare Function DLGHSHexagonExtentOBJ() As Object
+Declare Sub DLGHSSetHexagonExtentOBJ(ByVal oValue As Object)
+

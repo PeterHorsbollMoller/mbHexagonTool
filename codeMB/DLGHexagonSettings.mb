@@ -13,6 +13,7 @@ Include "Menu.def"
 Include "Library\Defaults.def"
 
 '-------------------------------------
+Include "Library\ARRAYLib.def"
 Include "Library\DEBUGLib.def"
 Include "Library\ERRORLib.def"
 Include "Library\HEXAGONLib.def"
@@ -21,7 +22,9 @@ Include "Library\TABLELib.def"
 Define	CTRL_CMD_OK				10
 Define	CTRL_LST_HEXAGON_TYPES		100
 Define	CTRL_TXT_SIZE				200
+Define	CTRL_LBL_ESTIMATES			210
 Define	CTRL_TXT_TAB_FILE			300
+Define	CTRL_TXT_COORDSYS			310
 Define	CTRL_LST_INPUT_TYPES		400
 Define	CTRL_LST_MAP_WINDOWS		500
 
@@ -30,6 +33,8 @@ Include "DLGHexagonSettings.def"
 Declare Sub DLGHSHandler_OnLoad
 Declare Sub DLGHSHandler_InputTypeClicked
 Declare Sub DLGHSHandler_MapClicked
+Declare Sub DLGHSHandler_HexTypeClicked
+Declare Sub DLGHSHandler_Estimate
 Declare Sub DLGHSHandler_OKClicked
 
 
@@ -37,7 +42,8 @@ Dim	mnMID, mnInputType, mnHexagonType, mnCalculationType As Integer,
 	mfHexagonSize As Float,
 	msUnit, msTabFile As String,
 	marrMapWindowIDs(0) As Integer,
-	marrMapWindowNames(0) As String
+	marrMapWindowNames(0) As String,
+	moSel As Object
 '**********************************************************************************************''
 'Created by Peter Horsbøll Møller, Pitney Bowes
 'Parameters:
@@ -51,55 +57,62 @@ OnError GoTo ErrorOccured
 
 DLGHexagonSettings = FALSE
 
-	mnMID = FrontWindow()
+	Call DLGHSSetHexagonExtentMID(FrontWindow())
 
 	Dialog
 		Title "Hexagon Settings"
+		Calling DLGHSHandler_OnLoad
 
 		Control StaticText
 			Position 5,5
 			Title "Create From"
 		Control RadioGroup		ID CTRL_LST_INPUT_TYPES
-			Position 5,20
+			Position 5,15
 			Title "Map Window;Selection"
 			Value DLGHSInputType()
 			Calling DLGHSHandler_InputTypeClicked
 		Control PopUpMenu		ID CTRL_LST_MAP_WINDOWS
-			Position 75,20		Width 200
+			Position 75,15		Width 200
 			Calling DLGHSHandler_MapClicked
 
 
 		Control StaticText
-			Position 5,25
+			Position 5,45
 			Title "Hexagon Type"
 		Control RadioGroup		ID CTRL_LST_HEXAGON_TYPES
-			Position 5,40
+			Position 5,55
 			Title "Pointy Top;Flat Top"
 			Value DLGHSHexagonType()
+			Calling DLGHSHandler_HexTypeClicked
 
 		Control StaticText
-			Position 75,25
+			Position 75,45
 			Title "Hexagon Size (radius)"
 		Control EditText		ID CTRL_TXT_SIZE
-			Position 75,40		Width 100
+			Position 75,55		Width 100
 			Value FormatNumber$(DLGHSHexagonSize())
 		Control StaticText
-			Position 180,42
+			Position 180,57
 			Title DLGHSHexagonUnit()
 
 		Control StaticText
-			Position 75,57	Width 100
+			Position 75,70	Width 100
 			Title "Estimations:"
-		Control StaticText
-			Position 75,67	Width 200
-			Title  "Hexagons: " & FormatNumber$(HEXEstimateForMap(DLGHSHexagonSize(), DLGHSHexagonUnit(), mnMID, DLGHSCalculationType(), DLGHSHexagonType())) & " Columns: " & FormatNumber$(HEXNumHexagonColumnsEstimated()) & " Rows: " & FormatNumber$(HEXNumHexagonRowsEstimated())
+		Control StaticText		ID CTRL_LBL_ESTIMATES
+			Position 75,80	Width 200
 
 		Control StaticText
-			Position 5,80
+			Position 5,90
 			Title "Hexagon Tab File"
 		Control EditText		ID CTRL_TXT_TAB_FILE
-			Position 5,95		Width 300
+			Position 5,100		Width 300
 			Value DLGHSHexagonTabFile()
+
+		Control StaticText
+			Position 5,120
+			Title "Coordsys"
+		Control EditText		ID CTRL_TXT_COORDSYS
+			Position 5,130		Width 300
 
 		Control OKButton		ID CTRL_CMD_OK
 			Calling DLGHSHandler_OKClicked
@@ -126,6 +139,8 @@ End Function
 '**********************************************************************************************''
 Sub DLGHSHandler_OnLoad
 
+Dim	nWin, nNumProjectedMaps, nMapItem As Integer
+
 OnError GoTo ErrorOccured
 
 	Redim marrMapWindowIDs(0)
@@ -133,27 +148,44 @@ OnError GoTo ErrorOccured
 	For nWin = 1 To NumWindows()
 		If WindowInfo(WindowID(nWin), WIN_INFO_TYPE) = WIN_MAPPER Then
 			Call ARRAYAddValueInteger(marrMapWindowIDs, WindowID(nWin))
-			Call ARRAYAddValueString(marrMapWindowIDs, WindowInfo(WindowID(nWin), WIN_INFO_NAME))
+			Call ARRAYAddValueString(marrMapWindowNames, WindowInfo(WindowID(nWin), WIN_INFO_NAME))
+			nNumProjectedMaps	= nNumProjectedMaps + 1
+			If WindowID(nWin) = DLGHSHexagonExtentMID() Then
+				nMapItem = Ubound(marrMapWindowIDs)
+			End If
 		End If
-	Loop
+	Next
 
-	If SelectionInfo(SEL_INFO_NROWS) <> 1 And Ubound(nNumProjectedMaps) = 0 Then
-		Note "You need to select one record or have at least one map using a projected coordinate system!"
-		Alter Control CTRL_LST_INPUT_TYPES Disable
-		Alter Control CTRL_LST_MAP_WINDOWS Disable
-		Alter Control CTRL_CMD_OK Disable
-		Exit Sub
-	ElseIf SelectionInfo(SEL_INFO_NROWS) = 1 And Ubound(nNumProjectedMaps) > 0 Then
-		Alter Control CTRL_LST_INPUT_TYPES Ensable
-		Alter Control CTRL_LST_INPUT_TYPES Value DLGHSInputType()
-	ElseIf SelectionInfo(SEL_INFO_NROWS) = 1 Then
-		Alter Control CTRL_LST_INPUT_TYPES Disable
-		Alter Control CTRL_LST_MAP_WINDOWS Disable
-		Alter Control CTRL_LST_INPUT_TYPES Value 2
+	If SelectionInfo(SEL_INFO_NROWS) = 1 Then
+		Fetch First From Selection
+		Call DLGHSSetHexagonExtentOBJ(Selection.obj)
+
+		If nNumProjectedMaps > 0 Then
+			Alter Control CTRL_LST_INPUT_TYPES Enable
+			Alter Control CTRL_LST_INPUT_TYPES Value DLGHSInputType()
+			Alter Control CTRL_LST_MAP_WINDOWS	Title From Variable marrMapWindowNames
+			Alter Control CTRL_LST_MAP_WINDOWS	Value Maximum(1, nMapItem)
+		Else
+			Alter Control CTRL_LST_MAP_WINDOWS	Title From Variable marrMapWindowNames
+			Alter Control CTRL_LST_INPUT_TYPES Disable
+			Alter Control CTRL_LST_INPUT_TYPES Value HEX_INPUT_TYPE_SELECTION
+		End If
 	Else
-		Alter Control CTRL_LST_INPUT_TYPES Disable
-		Alter Control CTRL_LST_INPUT_TYPES Value 1
+		If nNumProjectedMaps = 0 Then
+			Note "You need to select one record or have at least one map using a projected coordinate system!"
+			Alter Control CTRL_LST_MAP_WINDOWS	Title From Variable marrMapWindowNames
+			Alter Control CTRL_LST_INPUT_TYPES Disable
+			Alter Control CTRL_CMD_OK Disable
+			Exit Sub
+		Else
+			Alter Control CTRL_LST_MAP_WINDOWS	Title From Variable marrMapWindowNames
+			Alter Control CTRL_LST_MAP_WINDOWS	Value Maximum(1, nMapItem)
+			Alter Control CTRL_LST_INPUT_TYPES Disable
+			Alter Control CTRL_LST_INPUT_TYPES Value HEX_INPUT_TYPE_MAP
+		End If
 	End If
+
+	Call DLGHSHandler_InputTypeClicked
 
 	Exit Sub
 '-------------------------
@@ -172,11 +204,19 @@ Sub DLGHSHandler_InputTypeClicked
 
 OnError GoTo ErrorOccured
 
+	If ReadControlValue(CTRL_LST_INPUT_TYPES) = HEX_INPUT_TYPE_MAP Then
+		Alter Control CTRL_LST_MAP_WINDOWS Enable
+		Call DLGHSHandler_MapClicked
+	Else
+		Alter Control CTRL_LST_MAP_WINDOWS Disable
+		Alter Control CTRL_TXT_COORDSYS Value TableInfo(Selection, TAB_INFO_COORDSYS_NAME)
+		Call DLGHSHandler_Estimate
+	End If
+
 	Exit Sub
 '-------------------------
 ErrorOccured:
-	Call ERRCreate(Err(), Error$(), "DLGHSHandler_InputTypeClicked
-")
+	Call ERRCreate(Err(), Error$(), "DLGHSHandler_InputTypeClicked")
 	Call ERRShow()
 
 End Sub
@@ -188,7 +228,69 @@ End Sub
 '**********************************************************************************************''
 Sub DLGHSHandler_MapClicked
 
+Dim	nItem As Integer
+
 OnError GoTo ErrorOccured
+
+	nItem 	= ReadControlValue(CTRL_LST_MAP_WINDOWS)
+	Call DLGHSSetHexagonExtentMID(marrMapWindowIDs(nItem))
+	Alter Control CTRL_TXT_COORDSYS Value MapperInfo(DLGHSHexagonExtentMID(), MAPPER_INFO_COORDSYS_NAME)
+
+	Set Window DLGHSHexagonExtentMID() Front
+
+	Call DLGHSHandler_Estimate
+
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSHandler_MapClicked")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub DLGHSHandler_HexTypeClicked
+
+OnError GoTo ErrorOccured
+
+	Call DLGHSHandler_Estimate
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSHandler_HexTypeClicked")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub DLGHSHandler_Estimate
+
+Dim	nSize, nType, nCalculationType As Integer,
+	sNumHexagons, sNumRows, sNumColumns As String
+
+OnError GoTo ErrorOccured
+
+	nSize			= Val(DeformatNumber$(ReadControlValue(CTRL_TXT_SIZE)))
+	nType			= ReadControlValue(CTRL_LST_HEXAGON_TYPES)
+	nCalculationType	= HEX_CALC_TYPE_CARTESIAN
+
+	If ReadControlValue(CTRL_LST_INPUT_TYPES) = HEX_INPUT_TYPE_MAP Then
+		sNumHexagons	= FormatNumber$(HEXEstimateForMap(nSize, DLGHSHexagonUnit(), DLGHSHexagonExtentMID(), nCalculationType, nType))
+	Else
+		sNumHexagons	= FormatNumber$(HEXEstimateForObject(nSize, DLGHSHexagonUnit(), DLGHSHexagonExtentOBJ(), nCalculationType, nType))
+	End If
+	sNumRows		= FormatNumber$(HEXNumHexagonColumnsEstimated())
+	sNumColumns	= FormatNumber$(HEXNumHexagonRowsEstimated())
+
+	Alter Control CTRL_LBL_ESTIMATES	Title  "Hexagons: " & sNumHexagons & " Columns: " & sNumColumns & " Rows: " & sNumRows
 
 	Exit Sub
 '-------------------------
@@ -209,7 +311,10 @@ Dim nNumHexs As Integer
 
 OnError GoTo ErrorOccured
 
+	Call DLGHSSetInputType(ReadControlValue(CTRL_LST_INPUT_TYPES))
 	Call DLGHSSetHexagonType(ReadControlValue(CTRL_LST_HEXAGON_TYPES))
+	Call DLGHSSetCalculationType(HEX_CALC_TYPE_CARTESIAN)
+
 	If Val(DeformatNumber$(ReadControlValue(CTRL_TXT_SIZE))) > 0 Then
 		Call DLGHSSetHexagonSize(Val(DeformatNumber$(ReadControlValue(CTRL_TXT_SIZE))))
 	Else
@@ -242,9 +347,10 @@ OnError GoTo ErrorOccured
 		Exit Sub
 	End If
 
-	nNumHexs = HEXEstimateForMap(DLGHSHexagonSize(), DLGHSHexagonUnit(), mnMID, DLGHSCalculationType(), DLGHSHexagonType())
-	If nNumHexs > 100000 Then
-		If Ask("You are creating around " & FormatNumber$(nNumHexs) & "! Do you want to continue?", "No", "Yes") Then
+	Call DLGHSHandler_Estimate
+	nNumHexs = HEXNumHexagonsEstimated()
+	If nNumHexs > 250000 Then
+		If Ask("You are creating around " & FormatNumber$(Round(nNumHexs, 10000)) & " hexagons! Do you want to continue?", "No", "Yes") Then
 			Alter Control CTRL_TXT_SIZE Value FormatNumber$(DLGHSHexagonSize())
 			Alter Control CTRL_TXT_SIZE Active
 			Dialog Preserve
@@ -450,6 +556,60 @@ OnError GoTo ErrorOccured
 '-------------------------
 ErrorOccured:
 	Call ERRCreate(Err(), Error$(), "DLGHSHexagonTable")
+
+End Function
+
+'**********************************************************************************************''
+' Property
+'**********************************************************************************************''
+Sub DLGHSSetHexagonExtentMID(ByVal nMID As Integer)
+
+OnError GoTo ErrorOccured
+
+	mnMID = nMID
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSSetHexagonExtentMID")
+
+End Sub
+'**********************************************************************************************''
+Function DLGHSHexagonExtentMID() As Integer
+
+OnError GoTo ErrorOccured
+
+	DLGHSHexagonExtentMID = mnMID
+	Exit Function
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSHexagonExtentMID")
+
+End Function
+
+'**********************************************************************************************''
+' Property
+'**********************************************************************************************''
+Sub DLGHSSetHexagonExtentOBJ(ByVal oValue As Object)
+
+OnError GoTo ErrorOccured
+
+	moSel = oValue
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSSetHexagonExtentOBJ")
+
+End Sub
+'**********************************************************************************************''
+Function DLGHSHexagonExtentOBJ() As Object
+
+OnError GoTo ErrorOccured
+
+	DLGHSHexagonExtentOBJ = moSel
+	Exit Function
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSHexagonExtentOBJ")
 
 End Function
 
