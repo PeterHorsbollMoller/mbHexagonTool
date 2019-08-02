@@ -22,3 +22,11 @@ Declare Sub DLGHSSetHexagonExtentMID(ByVal nMID As Integer)
 Declare Function DLGHSHexagonExtentOBJ() As Object
 Declare Sub DLGHSSetHexagonExtentOBJ(ByVal oValue As Object)
 
+Declare Function DLGHSHexagonPen() As Pen
+Declare Sub DLGHSSetHexagonPen(ByVal penValue As Pen)
+Declare Function DLGHSHexagonBrush() As Brush
+Declare Sub DLGHSSetHexagonBrush(ByVal brsValue As Brush)
+
+Declare Sub DLGHSSetConfigFileName(ByVal sFile As String)
+Declare Sub DLGHSWriteConfigFile
+Declare Sub DLGHSReadConfigFile

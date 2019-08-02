@@ -13,6 +13,7 @@ Using VCS=0
 Save Account=0
 Create Tagfile=0
 CTags Legacy Support=0
+Def Out Path=D:\Dropbox (Horsboll-Moller)\3. MB_Kode\mbHexagonTool\codeMB\Library
 [uemakeXp]
 ReleaseMode=0
 [Debug Settings]

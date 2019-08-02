@@ -14,9 +14,11 @@ Include "Library\Defaults.def"
 
 '-------------------------------------
 Include "Library\ARRAYLib.def"
+Include "Library\CONFIGFILELib.def"
 Include "Library\DEBUGLib.def"
 Include "Library\ERRORLib.def"
 Include "Library\HEXAGONLib.def"
+Include "Library\STYLELib.def"
 Include "Library\TABLELib.def"
 
 Define	CTRL_CMD_OK				10
@@ -35,6 +37,7 @@ Declare Sub DLGHSHandler_InputTypeClicked
 Declare Sub DLGHSHandler_MapClicked
 Declare Sub DLGHSHandler_HexTypeClicked
 Declare Sub DLGHSHandler_Estimate
+Declare Sub DLGHSHandler_BrowseOutputFile
 Declare Sub DLGHSHandler_OKClicked
 
 
@@ -43,7 +46,9 @@ Dim	mnMID, mnInputType, mnHexagonType, mnCalculationType As Integer,
 	msUnit, msTabFile As String,
 	marrMapWindowIDs(0) As Integer,
 	marrMapWindowNames(0) As String,
-	moSel As Object
+	moSel As Object,
+	mpenHexagon As Pen, mbrsHexagon As Brush,
+	msConfigFile As String
 '**********************************************************************************************''
 'Created by Peter Horsbøll Møller, Pitney Bowes
 'Parameters:
@@ -72,7 +77,7 @@ DLGHexagonSettings = FALSE
 			Value DLGHSInputType()
 			Calling DLGHSHandler_InputTypeClicked
 		Control PopUpMenu		ID CTRL_LST_MAP_WINDOWS
-			Position 75,15		Width 200
+			Position 75,15		Width 230
 			Calling DLGHSHandler_MapClicked
 
 
@@ -105,20 +110,31 @@ DLGHexagonSettings = FALSE
 			Position 5,90
 			Title "Hexagon Tab File"
 		Control EditText		ID CTRL_TXT_TAB_FILE
-			Position 5,100		Width 300
+			Position 5,100		Width 285
 			Value DLGHSHexagonTabFile()
+		Control Button
+			Position 290,100	Width 15	Height 13
+			Title "..."
+			Calling DLGHSHandler_BrowseOutputFile
 
 		Control StaticText
 			Position 5,120
 			Title "Coordsys"
 		Control EditText		ID CTRL_TXT_COORDSYS
 			Position 5,130		Width 300
+			Disable
+
+		Control StaticText
+			Position 5,150		Width 260
+			Title "Please note that Lat/Long based coordinate systems aren't supported"
 
 		Control OKButton		ID CTRL_CMD_OK
+			Position 265,150	Width 40
 			Calling DLGHSHandler_OKClicked
 		Control CancelButton
+			Position 265,165	Width 40
 
-		If not CommandInfo(CMD_INFO_DLG_OK) Then
+		If NOT CommandInfo(CMD_INFO_DLG_OK) Then
 			Exit Function
 		End If
 
@@ -296,6 +312,37 @@ OnError GoTo ErrorOccured
 '-------------------------
 ErrorOccured:
 	Call ERRCreate(Err(), Error$(), "DLGHSHandler_MapClicked")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub DLGHSHandler_BrowseOutputFile
+
+Dim	sFile As String
+
+OnError GoTo ErrorOccured
+
+	sFile = ReadControlValue(CTRL_TXT_TAB_FILE)
+	If sFile = "" Then
+		sFile = PathToDirectory$(TempFileName$("")) & "Hexagons.tab"
+	End If
+
+	sFile = FileSaveAsDlg(PathToDirectory$(sFile), PathToFileName$(sFile), "TAB", "Specify folder and name of hexagon tab file...")
+	If sFile = "" Then
+		Exit Sub
+	End If
+
+	Alter Control CTRL_TXT_TAB_FILE Value sFile
+
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSHandler_BrowseOutputFile")
 	Call ERRShow()
 
 End Sub
@@ -613,3 +660,142 @@ ErrorOccured:
 
 End Function
 
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub DLGHSSetConfigFileName(ByVal sFile As String)
+
+OnError GoTo ErrorOccured
+
+	msConfigFile = sFile
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSSetConfigFileName")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+' Property
+'**********************************************************************************************''
+Sub DLGHSSetHexagonPen(ByVal penValue As Pen)
+
+OnError GoTo ErrorOccured
+
+	mpenHexagon = penValue
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSSetHexagonPen")
+
+End Sub
+'**********************************************************************************************''
+Function DLGHSHexagonPen() As Pen
+
+OnError GoTo ErrorOccured
+
+	DLGHSHexagonPen = mpenHexagon
+	Exit Function
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSHexagonPen")
+
+End Function
+
+'**********************************************************************************************''
+' Property
+'**********************************************************************************************''
+Sub DLGHSSetHexagonBrush(ByVal brsValue As Brush)
+
+OnError GoTo ErrorOccured
+
+	mbrsHexagon = brsValue
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSSetHexagonBrush")
+
+End Sub
+'**********************************************************************************************''
+Function DLGHSHexagonBrush() As Brush
+
+OnError GoTo ErrorOccured
+
+	DLGHSHexagonBrush = mbrsHexagon
+	Exit Function
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSHexagonBrush")
+
+End Function
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub DLGHSWriteConfigFile
+
+OnError GoTo ErrorOccured
+
+	Call CONFIGWriteKey(msConfigFile, "HEXAGONS", "TABFILE", DLGHSHexagonTabFile())
+	Call CONFIGWriteKey(msConfigFile, "HEXAGONS", "TYPE", Str$(DLGHSHexagonType()))
+	Call CONFIGWriteKey(msConfigFile, "HEXAGONS", "SIZE", Str$(DLGHSHexagonSize()))
+	Call CONFIGWriteKey(msConfigFile, "HEXAGONS", "PENSTYLE", STLPen2Text(DLGHSHexagonPen()))
+	Call CONFIGWriteKey(msConfigFile, "HEXAGONS", "BRUSHSTYLE", STLBrush2Text(DLGHSHexagonBrush()))
+
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSWriteConfigFile")
+	Call ERRShow()
+
+End Sub
+
+'**********************************************************************************************''
+'Created by Peter Horsbøll Møller, Pitney Bowes
+'Parameters:
+'
+'**********************************************************************************************''
+Sub DLGHSReadConfigFile
+
+Dim	sValue As String
+
+OnError GoTo ErrorOccured
+
+	sValue	= CONFIGReadKey(msConfigFile, "HEXAGONS", "TABFILE")
+	If NOT sValue = "" Then
+		Call DLGHSSetHexagonTabFile(sValue)
+	End If
+	sValue	= CONFIGReadKey(msConfigFile, "HEXAGONS", "TYPE")
+	If NOT sValue = "" Then
+		Call DLGHSSetHexagonType(Val(sValue))
+	End If
+	sValue	= CONFIGReadKey(msConfigFile, "HEXAGONS", "SIZE")
+	If NOT sValue = "" Then
+		Call DLGHSSetHexagonSize(Val(sValue))
+	End If
+	sValue	= CONFIGReadKey(msConfigFile, "HEXAGONS", "PENSTYLE")
+	If NOT sValue = "" Then
+		Call DLGHSSetHexagonPen(STLText2Pen(sValue))
+	Else
+		Call DLGHSSetHexagonPen(CurrentBorderPen())
+	End If
+	sValue	= CONFIGReadKey(msConfigFile, "HEXAGONS", "BRUSHSTYLE")
+	If NOT sValue = "" Then
+		Call DLGHSSetHexagonBrush(STLText2Brush(sValue))
+	Else
+		Call DLGHSSetHexagonBrush(CurrentBrush())
+	End If
+
+
+	Exit Sub
+'-------------------------
+ErrorOccured:
+	Call ERRCreate(Err(), Error$(), "DLGHSReadConfigFile")
+	Call ERRShow()
+
+End Sub

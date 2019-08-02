@@ -16,7 +16,7 @@ Include "Library\RibbonElements.def"
 
 Define xProgram 		"HexagonTool"
 Define xProgramMenu		"HexagonTool"
-Define xVersion 		"1.0"
+Define xVersion 		"1.10"
 Define xYear			"2019"
 Define xAddToMenuBar	FALSE
 
@@ -62,6 +62,10 @@ OnError GoTo ErrorOccured
 	Call PRGISetApplicationVersion(xVersion)
 	Call PRGISetApplicationCopyrightYear(xYear)
 	Call PRGISetApplicationDevelopedBy("Peter Horsbøll Møller")
+
+
+	Call DLGHSSetConfigFileName(FILE_INI)
+	Call DLGHSReadConfigFile
 
 	'***Enabling Debug if file exists
 	Call DEBUGEnableByFile(FILE_DBG)
@@ -254,7 +258,8 @@ End Sub
 '**********************************************************************************************''
 Sub MENUHexagons
 
-Dim	nMID, nNumHex As Integer
+Dim	nMID, nNumHex As Integer,
+	penCur As Pen, brsCur As Brush
 
 OnError GoTo ErrorOccured
 
@@ -299,6 +304,11 @@ OnError GoTo ErrorOccured
 			CoordSys Table SelectionInfo(SEL_INFO_TABLENAME)
 	End If
 
+	penCur	= CurrentBorderPen()
+	brsCur	= CurrentBrush()
+	Set Style BorderPen DLGHSHexagonPen()
+	Set Style Brush DLGHSHexagonBrush()
+
 	Set Table DLGHSHexagonTable() Redraw Off
 	Set Table DLGHSHexagonTable() FastEdit On
 	Set Coordsys Table DLGHSHexagonTable()
@@ -316,6 +326,10 @@ OnError GoTo ErrorOccured
 			Layer DLGHSHexagonTable()
 	End If
 
+	Set Style BorderPen penCur
+	Set Style Brush brsCur
+
+	Call DLGHSWriteConfigFile
 	Call RBNNotificationShow("Creating Hexagons", FormatNumber$(HEXNumCreated()) & " hexagons created in " & FormatNumber$(HEXTimeSpent()) & " secs", Notify_Info, 5000)
 
 	Exit Sub
