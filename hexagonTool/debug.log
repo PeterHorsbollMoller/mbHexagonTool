@@ -1,0 +1,13 @@
+23:34:54 23:34:54 HEXEstimateForObject: Estimating Hexagons, size: 10.000 m: Width: 17.320,508076 m Height: 20.000 m
+23:34:54 23:34:54 Estimated number of Column: 137
+23:34:54 23:34:54 Estimated number of Rows: 25
+23:34:54 23:34:54 Estimated number of Hexagons: 3.425
+23:34:57 23:34:57 HEXEstimateForObject: Estimating Hexagons, size: 10.000 m: Width: 17.320,508076 m Height: 20.000 m
+23:34:57 23:34:57 Estimated number of Column: 78
+23:34:57 23:34:57 Estimated number of Rows: 27
+23:34:57 23:34:57 Estimated number of Hexagons: 2.106
+23:35:06 23:35:06 HEXEstimateForObject: Estimating Hexagons, size: 10.000 m: Width: 17.320,508076 m Height: 20.000 m
+23:35:06 23:35:06 Estimated number of Column: 137
+23:35:06 23:35:06 Estimated number of Rows: 25
+23:35:06 23:35:06 Estimated number of Hexagons: 3.425
+23:35:12 1 Removing control cmdHexagons of type 1

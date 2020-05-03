@@ -29,6 +29,8 @@ Define	CTRL_TXT_TAB_FILE			300
 Define	CTRL_TXT_COORDSYS			310
 Define	CTRL_LST_INPUT_TYPES		400
 Define	CTRL_LST_MAP_WINDOWS		500
+Define	CTRL_TXT_CHANGE_COORDSYS		600
+
 
 Include "DLGHexagonSettings.def"
 
@@ -127,6 +129,9 @@ DLGHexagonSettings = FALSE
 		Control StaticText
 			Position 5,150		Width 260
 			Title "Please note that Lat/Long based coordinate systems aren't supported"
+		Control StaticText		ID CTRL_TXT_CHANGE_COORDSYS
+			Position 5,165		Width 260
+			Title "Please change the coordsys of the map or base table"
 
 		Control OKButton		ID CTRL_CMD_OK
 			Position 265,150	Width 40
@@ -307,6 +312,14 @@ OnError GoTo ErrorOccured
 	sNumColumns	= FormatNumber$(HEXNumHexagonRowsEstimated())
 
 	Alter Control CTRL_LBL_ESTIMATES	Title  "Hexagons: " & sNumHexagons & " Columns: " & sNumColumns & " Rows: " & sNumRows
+
+	If ReadControlValue(CTRL_TXT_COORDSYS) Like "%Longitude%" Then
+		Alter Control CTRL_CMD_OK Disable
+		Alter Control CTRL_TXT_CHANGE_COORDSYS Show
+	Else
+		Alter Control CTRL_CMD_OK Enable
+		Alter Control CTRL_TXT_CHANGE_COORDSYS Hide
+	End If
 
 	Exit Sub
 '-------------------------
@@ -790,7 +803,6 @@ OnError GoTo ErrorOccured
 	Else
 		Call DLGHSSetHexagonBrush(CurrentBrush())
 	End If
-
 
 	Exit Sub
 '-------------------------

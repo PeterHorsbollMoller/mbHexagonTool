@@ -16,7 +16,7 @@ Include "Library\RibbonElements.def"
 
 Define xProgram 		"HexagonTool"
 Define xProgramMenu		"HexagonTool"
-Define xVersion 		"1.10"
+Define xVersion 		"1.11 Beta"
 Define xYear			"2019"
 Define xAddToMenuBar	FALSE
 
@@ -63,6 +63,7 @@ OnError GoTo ErrorOccured
 	Call PRGISetApplicationCopyrightYear(xYear)
 	Call PRGISetApplicationDevelopedBy("Peter Horsbøll Møller")
 
+	CAll PRGISetApplicationImageUri(ApplicationDirectory$() & "Images\Hexagons_32.png")
 
 	Call DLGHSSetConfigFileName(FILE_INI)
 	Call DLGHSReadConfigFile
@@ -70,13 +71,13 @@ OnError GoTo ErrorOccured
 	'***Enabling Debug if file exists
 	Call DEBUGEnableByFile(FILE_DBG)
 
-	Alter Menu ID 4 Add
-		"Create Pointy Hexagons for Map Extent"
-			HelpMsg ""
-				Calling MENUHexagonPointyForMapExtent,
-		"Create Flat Hexagons for Map Extent"
-			HelpMsg ""
-				Calling MENUHexagonFlatForMapExtent
+'	Alter Menu ID 4 Add
+'		"Create Pointy Hexagons for Map Extent"
+'			HelpMsg ""
+'				Calling MENUHexagonPointyForMapExtent,
+'		"Create Flat Hexagons for Map Extent"
+'			HelpMsg ""
+'				Calling MENUHexagonFlatForMapExtent
 
 	sTabName				= TAB_SPATIAL
 	sGroupName			= TAB_GROUP_SPATIAL_CREATE
@@ -92,7 +93,7 @@ OnError GoTo ErrorOccured
 		'Create & Set the button tooltip
 		Call RBNControlSetToolTipIdx(nCtrlIdx, PRGIGetApplicationName(), "Create hexagons.", "")
 		'Set the button icon
-		Call RBNControlSetIconsIdx(nCtrlIdx, CONTROL_SIZE_LARGE, "", ApplicationDirectory$() & "Images\Hexagons_32a.png")
+		Call RBNControlSetIconsIdx(nCtrlIdx, CONTROL_SIZE_LARGE, "", ApplicationDirectory$() & "Images\Hexagons_32.png")
 		'Set Custom MapBasic Handle to the button
 		Call RBNControlSetCustomMBXHandlerIdx(nCtrlIdx, "MENUHexagons")
 	End If

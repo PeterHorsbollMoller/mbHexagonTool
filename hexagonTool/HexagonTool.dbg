@@ -1,8 +1,8 @@
-15:33:11 15:33:11 HEXCreateForObject: Creating Hexagons, size: 2.500 m: Width: 4.330,127019 m Height: 5.000 m
-15:33:11 15:33:11 Creating Hexagons, Offset X: 2.165,063509 m: Offset Y: 7.500 m
-15:33:11 15:33:11 Estimated number of Column: 92
-15:33:11 15:33:11 Estimated number of Rows: 15
-15:33:11 15:33:11 Estimated number of Hexagons: 1.380
-15:33:12 15:33:12: Total Number of Hexagons: 1.472 in 1 secs
-15:33:12 15:33:12: Number of Rows: 16 Number of Columns: 93
-15:38:07 1 Removing control cmdHexagons of type 1
+13:29:14 13:29:14 HEXCreateForObject: Creating Hexagons, size: 50.000 m: Width: 86.602,540378 m Height: 100.000 m
+13:29:14 13:29:14 Creating Hexagons, Offset X: 43.301,270189 m: Offset Y: 150.000 m
+13:29:14 13:29:14 Estimated number of Column: 34
+13:29:14 13:29:14 Estimated number of Rows: 8
+13:29:14 13:29:14 Estimated number of Hexagons: 272
+13:29:14 13:29:14: Total Number of Hexagons: 315 in 0 secs
+13:29:14 13:29:14: Number of Rows: 9 Number of Columns: 36
+13:52:30 1 Removing control cmdHexagons of type 1
