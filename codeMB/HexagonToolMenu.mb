@@ -16,8 +16,8 @@ Include "Library\RibbonElements.def"
 
 Define xProgram 		"HexagonTool"
 Define xProgramMenu		"HexagonTool"
-Define xVersion 		"1.11 Beta"
-Define xYear			"2019"
+Define xVersion 		"1.12"
+Define xYear			"2020"
 Define xAddToMenuBar	FALSE
 
 Define FILE_INI			GetFolderPath$(FOLDER_MI_PREFERENCE) & xProgram & ".ini"
@@ -29,6 +29,7 @@ Define FILE_PAD			GetFolderPath$(FOLDER_MI_PREFERENCE) & xProgram & ".btp"
 Include "Library\DEBUGLib.def"
 Include "Library\ERRORLib.def"
 Include "Library\HEXAGONLib.def"
+Include "Library\MAPPERLib.def"
 Include "Library\ProgramInfo.def"
 Include "Library\RIBBONLib.def"
 Include "Library\TABLELib.def"
@@ -44,6 +45,7 @@ Declare Sub MENUHexagonPointyForMapExtent
 Declare Sub MENUHexagonFlatForMapExtent
 Declare Sub MENUHexagonsForMapExtent(ByVal nHexagonType As Integer)
 Declare Sub MENUHexagons
+
 Dim	msPath As String
 
 '**********************************************************************************************''
@@ -313,10 +315,26 @@ OnError GoTo ErrorOccured
 	Set Table DLGHSHexagonTable() Redraw Off
 	Set Table DLGHSHexagonTable() FastEdit On
 	Set Coordsys Table DLGHSHexagonTable()
+
+	Dim fSize As Float
+	Dim sUnit As String
+	Dim nCalculationType As Integer
+	Dim nHexagonType As Integer
+	Dim oExtent As Object
+	fSize			= DLGHSHexagonSize()
+	sUnit			= DLGHSHexagonUnit()
+	nCalculationType	= DLGHSCalculationType()
+	nHexagonType		= DLGHSHexagonType()
+
 	If DLGHSInputType() = HEX_INPUT_TYPE_MAP Then
-		nNumHex = HEXCreateForMap(DLGHSHexagonTable(), "HEXNO", DLGHSHexagonSize(), DLGHSHexagonUnit(), DLGHSHexagonExtentMID(), DLGHSCalculationType(), DLGHSHexagonType())
+		nMID				= DLGHSHexagonExtentMID()
+'		Call DEBUGPrint("HEXCreateForMap(" & DLGHSHexagonTable() & ", HEXNO, " & fSize & ", " & sUnit & ", " & nMID & ", " & nCalculationType & ", " & nHexagonType & ")")
+		nNumHex = HEXCreateForMap(DLGHSHexagonTable(), "HEXNO", fSize, sUnit, nMID, nCalculationType, nHexagonType)
+		'nNumHex = HEXCreateForMap(DLGHSHexagonTable(), "HEXNO", DLGHSHexagonSize(), DLGHSHexagonUnit(), DLGHSHexagonExtentMID(), DLGHSCalculationType(), DLGHSHexagonType())
 	Else
-		nNumHex = HEXCreateForObject(DLGHSHexagonTable(), "HEXNO", DLGHSHexagonSize(), DLGHSHexagonUnit(), DLGHSHexagonExtentOBJ(), DLGHSCalculationType(), DLGHSHexagonType())
+		oExtent = DLGHSHexagonExtentOBJ()
+		nNumHex = HEXCreateForObject(DLGHSHexagonTable(), "HEXNO", fSize, sUnit, oExtent, nCalculationType, nHexagonType)
+'		nNumHex = HEXCreateForObject(DLGHSHexagonTable(), "HEXNO", DLGHSHexagonSize(), DLGHSHexagonUnit(), DLGHSHexagonExtentOBJ(), DLGHSCalculationType(), DLGHSHexagonType())
 	End If
 	Commit Table DLGHSHexagonTable()
 	Set Table DLGHSHexagonTable() Redraw On

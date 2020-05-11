@@ -1177,6 +1177,14 @@ HEXCreateForObject = 0
 	fMaxX	= ObjectGeography(oInput, OBJ_GEO_MAXX)
 	fMaxY	= ObjectGeography(oInput, OBJ_GEO_MAXY)
 
+	If Distance(fMinX, fMinY, fMaxX, fMinY, "m") < 10 or Distance(fMinX, fMinY, fMinX, fMaxY, "m") < 10 Then
+		oInput = Buffer(oInput, 24, 100, "m")
+		fMinX	= ObjectGeography(oInput, OBJ_GEO_MINX)
+		fMinY	= ObjectGeography(oInput, OBJ_GEO_MINY)
+		fMaxX	= ObjectGeography(oInput, OBJ_GEO_MAXX)
+		fMaxY	= ObjectGeography(oInput, OBJ_GEO_MAXY)
+	End If
+
 	fWidth	= HEXGetWidth(fSize, nHexagonType)
 	fHeight	= HEXGetHeight(fSize, nHexagonType)
 	fOffsetX	= HEXGetOffsetX(fSize, nHexagonType)
@@ -1332,8 +1340,17 @@ HEXEstimateForObject = 0
 	fMaxX	= ObjectGeography(oInput, OBJ_GEO_MAXX)
 	fMaxY	= ObjectGeography(oInput, OBJ_GEO_MAXY)
 
+	If Distance(fMinX, fMinY, fMaxX, fMinY, "m") < 10 or Distance(fMinX, fMinY, fMinX, fMaxY, "m") < 10 Then
+		oInput = Buffer(oInput, 24, 100, "m")
+		fMinX	= ObjectGeography(oInput, OBJ_GEO_MINX)
+		fMinY	= ObjectGeography(oInput, OBJ_GEO_MINY)
+		fMaxX	= ObjectGeography(oInput, OBJ_GEO_MAXX)
+		fMaxY	= ObjectGeography(oInput, OBJ_GEO_MAXY)
+	End If
+
 	fWidth	= HEXGetWidth(fSize, nHexagonType)
 	fHeight	= HEXGetHeight(fSize, nHexagonType)
+
 	Call DEBUGPrint(Time(24) & " HEXEstimateForObject: Estimating Hexagons, size: " & FormatNumber$(fSize) & " " & sUnit &  ": Width: " & FormatNumber$(fWidth) & " " & sUnit & " Height: " & FormatNumber$(fHeight) & " " & sUnit)
 
 	If HEXUseBaseForHexagon() Then
@@ -1555,6 +1572,7 @@ Dim	oWindow As Object
 
 OnError GoTo ErrorOccured
 
+	Call DEBUGPrint("Function HEXCreateForMap")
 	oWindow			= MAPGetExtent(nMID)
 	HEXCreateForMap	= HEXCreateForObject(sTab, sCol, fSize, sUnit, oWindow, nCalculationType, nHexagonType)
 
