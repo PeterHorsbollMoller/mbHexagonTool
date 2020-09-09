@@ -16,7 +16,7 @@ Include "Library\RibbonElements.def"
 
 Define xProgram 		"HexagonTool"
 Define xProgramMenu		"HexagonTool"
-Define xVersion 		"1.12"
+Define xVersion 		"1.20"
 Define xYear			"2020"
 Define xAddToMenuBar	FALSE
 
@@ -24,6 +24,8 @@ Define FILE_INI			GetFolderPath$(FOLDER_MI_PREFERENCE) & xProgram & ".ini"
 Define FILE_DBG			ApplicationDirectory$() & xProgram & ".dbg"
 'Define FILE_DLL			ApplicationDirectory$() & xProgram & ".dll"
 Define FILE_PAD			GetFolderPath$(FOLDER_MI_PREFERENCE) & xProgram & ".btp"
+Define FILE_HLP			ApplicationDirectory$() & xProgram & ".pdf"
+
 
 '-------------------------------------
 Include "Library\DEBUGLib.def"
@@ -64,8 +66,8 @@ OnError GoTo ErrorOccured
 	Call PRGISetApplicationVersion(xVersion)
 	Call PRGISetApplicationCopyrightYear(xYear)
 	Call PRGISetApplicationDevelopedBy("Peter Horsbøll Møller")
-
 	CAll PRGISetApplicationImageUri(ApplicationDirectory$() & "Images\Hexagons_32.png")
+	Call PRGISetApplicationHelpFile(FILE_HLP)
 
 	Call DLGHSSetConfigFileName(FILE_INI)
 	Call DLGHSReadConfigFile

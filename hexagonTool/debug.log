@@ -11,3 +11,20 @@
 23:35:06 23:35:06 Estimated number of Rows: 25
 23:35:06 23:35:06 Estimated number of Hexagons: 3.425
 23:35:12 1 Removing control cmdHexagons of type 1
+11:54:31 11:54:31 HEXEstimateForObject: Estimating Hexagons, size: 300 m: Width: 519,615242 m Height: 600 m
+11:54:31 11:54:31 Estimated number of Column: 136
+11:54:31 11:54:31 Estimated number of Rows: 26
+11:54:31 11:54:31 Estimated number of Hexagons: 3.536
+11:55:33 11:55:33 HEXEstimateForObject: Estimating Hexagons, size: 300 m: Width: 519,615242 m Height: 600 m
+11:55:33 11:55:33 Estimated number of Column: 136
+11:55:33 11:55:33 Estimated number of Rows: 20
+11:55:33 11:55:33 Estimated number of Hexagons: 2.720
+11:55:33 Function HEXCreateForMap
+11:55:33 11:55:33 HEXCreateForObject: Creating Hexagons, size: 300 m: Width: 519,615242 m Height: 600 m
+11:55:33 11:55:33 Creating Hexagons, Offset X: 259,807621 m: Offset Y: 900 m
+11:55:33 11:55:33 Estimated number of Column: 136
+11:55:33 11:55:33 Estimated number of Rows: 20
+11:55:33 11:55:33 Estimated number of Hexagons: 2.720
+11:55:34 11:55:34:    100. Column: Created 20 hexagons. Totally hexagons created: 2.050
+11:55:35 11:55:35: Total Number of Hexagons: 2.788 in 2 secs
+11:55:35 11:55:35: Number of Rows: 21 Number of Columns: 137
