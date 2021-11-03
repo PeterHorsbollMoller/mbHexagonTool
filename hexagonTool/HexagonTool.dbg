@@ -1,47 +1,11 @@
-23:11:19 23:11:19 Estimated number of Rows: 14
-23:11:19 23:11:19 Estimated number of Hexagons: 1.456
-23:11:19 HEXCreateForMap(Hexagons_10km, HEXNO, 10000, m, 3006, 1, 1)
-23:11:19 Function HEXCreateForMap
-23:11:19 23:11:19 HEXCreateForObject: Creating Hexagons, size: 10.000 m: Width: 17.320,508076 m Height: 20.000 m
-23:11:19 23:11:19 Creating Hexagons, Offset X: 8.660,254038 m: Offset Y: 30.000 m
-23:11:19 23:11:19 Estimated number of Column: 104
-23:11:19 23:11:19 Estimated number of Rows: 14
-23:11:19 23:11:19 Estimated number of Hexagons: 1.456
-23:11:20 23:11:20:    100. Column: Created 14 hexagons. Totally hexagons created: 1.400
-23:11:20 23:11:20: Total Number of Hexagons: 1.456 in 1 secs
-23:11:20 23:11:20: Number of Rows: 14 Number of Columns: 105
-15:39:14 15:39:14 HEXEstimateForObject: Estimating Hexagons, size: 10.000 m: Width: 17.320,508076 m Height: 20.000 m
-15:39:14 15:39:14 Estimated number of Column: 0
-15:39:14 15:39:14 Estimated number of Rows: 0
-15:39:14 15:39:14 Estimated number of Hexagons: 0
-15:39:43 15:39:43 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
-15:39:43 15:39:43 Estimated number of Column: 0
-15:39:43 15:39:43 Estimated number of Rows: 0
-15:39:44 15:39:43 Estimated number of Hexagons: 0
-15:39:44 Function HEXCreateForMap
-15:39:44 15:39:44 HEXCreateForObject: Creating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
-15:39:44 15:39:44 Creating Hexagons, Offset X: 4.330,127019 m: Offset Y: 15.000 m
-15:39:44 15:39:44 Estimated number of Column: 0
-15:39:44 15:39:44 Estimated number of Rows: 0
-15:39:44 15:39:44 Estimated number of Hexagons: 0
-15:39:44 15:39:44: Total Number of Hexagons: 1 in 0 secs
-15:39:44 15:39:44: Number of Rows: 1 Number of Columns: 2
-11:18:25 11:18:25 HEXEstimateForObject: Estimating Hexagons, size: 5.000 m: Width: 8.660,254038 m Height: 10.000 m
-11:18:25 11:18:25 Estimated number of Column: 10
-11:18:25 11:18:25 Estimated number of Rows: 2
-11:18:25 11:18:25 Estimated number of Hexagons: 20
-11:18:56 11:18:56 HEXEstimateForObject: Estimating Hexagons, size: 300 m: Width: 519,615242 m Height: 600 m
-11:18:56 11:18:56 Estimated number of Column: 167
-11:18:56 11:18:56 Estimated number of Rows: 32
-11:18:56 11:18:56 Estimated number of Hexagons: 5.344
-11:18:56 Function HEXCreateForMap
-11:18:56 11:18:56 HEXCreateForObject: Creating Hexagons, size: 300 m: Width: 519,615242 m Height: 600 m
-11:18:56 11:18:56 Creating Hexagons, Offset X: 259,807621 m: Offset Y: 900 m
-11:18:56 11:18:56 Estimated number of Column: 167
-11:18:56 11:18:56 Estimated number of Rows: 32
-11:18:56 11:18:56 Estimated number of Hexagons: 5.344
-11:18:58 11:18:58:    100. Column: Created 32 hexagons. Totally hexagons created: 3.200
-11:18:59 11:18:59: Total Number of Hexagons: 5.376 in 3 secs
-11:18:59 11:18:59: Number of Rows: 32 Number of Columns: 169
-11:51:31 Found no string files!
-15:35:38 Found no string files!
+07:51:23 07:51:23 Estimated number of Rows: 11
+07:51:23 07:51:23 Estimated number of Hexagons: 396
+07:51:23 Function HEXCreateForMap
+07:51:23 07:51:23 HEXCreateForObject: Creating Hexagons, size: 25 m: Width: 43,30127 m Height: 50 m
+07:51:23 07:51:23 Creating Hexagons, Offset X: 21,650635 m: Offset Y: 75 m
+07:51:23 07:51:23 Estimated number of Column: 36
+07:51:23 07:51:23 Estimated number of Rows: 11
+07:51:23 07:51:23 Estimated number of Hexagons: 396
+07:51:23 07:51:23: Total Number of Hexagons: 432 in 0 secs
+07:51:23 07:51:23: Number of Rows: 12 Number of Columns: 37
+14:42:50 Found no string files!
