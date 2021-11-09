@@ -16,7 +16,7 @@ Include "Library\RibbonElements.def"
 
 Define xProgram 		"HexagonTool"
 Define xProgramMenu		"HexagonTool"
-Define xVersion 		"1.20.1"
+Define xVersion 		"1.20.2"
 Define xYear			"2021"
 Define xAddToMenuBar	FALSE
 
